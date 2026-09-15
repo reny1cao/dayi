@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Dayi 多段选区回归</title>
+<style>
+body { font: 18px system-ui; margin: 40px; max-width: 800px; }
+[contenteditable] { border: 1px solid #777; padding: 16px; margin: 20px 0; white-space: pre-wrap; }
+p { margin: 0; }
+button { margin-right: 12px; padding: 8px; }
+</style>
+<h1>Dayi 多段选区回归</h1>
+<p>仅含合成草稿。点击重置后，在输入框按已配置的 Dayi 快捷键，再用 Dayi 撤回。正文应恢复且后续编辑不能丢失。</p>
+<div id="draft" contenteditable="true" role="textbox" aria-multiline="true" aria-label="合成多段草稿"></div>
+<button onclick="reset()">重置并取消选区</button>
+<button onclick="selectMiddle()">只选中间一段</button>
+<button onclick="selectAcross()">选择跨段子串</button>
+<output id="status"></output>
+<script>
+const lines = ['保留前缀🙂', '请把这个功能说明写清楚 e\u0301。', '保留后缀🙂'];
+const draft = document.getElementById('draft');
+function select(startNode, start, endNode, end) {
+  draft.focus();
+  getSelection().setBaseAndExtent(startNode, start, endNode, end);
+}
+function reset() {
+  draft.replaceChildren(...lines.map(text => {
+    const p = document.createElement('p');
+    p.textContent = text;
+    return p;
+  }));
+  select(draft.lastChild.firstChild, lines[2].length, draft.lastChild.firstChild, lines[2].length);
+  document.getElementById('status').textContent = '已重置为三个独立段落';
+}
+function selectMiddle() {
+  reset();
+  select(draft.children[1].firstChild, 0, draft.children[1].firstChild, lines[1].length);
+}
+function selectAcross() {
+  reset();
+  select(draft.children[0].firstChild, 2, draft.children[1].firstChild, lines[1].length);
+}
+reset();
+</script>

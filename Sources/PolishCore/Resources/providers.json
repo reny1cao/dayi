@@ -1,0 +1,798 @@
+{
+ "source": {
+  "repo": "farion1231/cc-switch",
+  "file": "src/config/codexProviderPresets.ts",
+  "commit": "2d54e261c8a2",
+  "date": "2026-09-09",
+  "license": "MIT",
+  "icons": "src/icons/extracted (same repository and revision)"
+ },
+ "categories": {
+  "official": "国际官方",
+  "cn_official": "中国官方",
+  "aggregator": "聚合服务",
+  "third_party": "第三方中转"
+ },
+ "providers": [
+  {
+   "name": "Anthropic (OpenAI 兼容层)",
+   "category": "official",
+   "endpoint": "https://api.anthropic.com/v1/chat/completions",
+   "model": "claude-sonnet-5",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://console.anthropic.com",
+   "apiKeyURL": "https://console.anthropic.com/settings/keys",
+   "models": [
+    "claude-sonnet-5",
+    "claude-opus-5",
+    "claude-haiku-4-5"
+   ],
+   "verified": false,
+   "note": "官方注明兼容层面向测试；单段文本改写够用",
+   "icon": "anthropic.svg"
+  },
+  {
+   "name": "Google Gemini (OpenAI 兼容)",
+   "category": "official",
+   "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+   "model": "gemini-3-flash",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://ai.google.dev",
+   "apiKeyURL": "https://aistudio.google.com/apikey",
+   "models": [],
+   "verified": false,
+   "note": "未实测",
+   "icon": "gemini.svg"
+  },
+  {
+   "name": "OpenAI",
+   "category": "official",
+   "endpoint": "https://api.openai.com/v1/chat/completions",
+   "model": "gpt-5.6",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.openai.com",
+   "apiKeyURL": "https://platform.openai.com/api-keys",
+   "models": [
+    "gpt-5.6",
+    "gpt-5.6-mini"
+   ],
+   "verified": false,
+   "note": "官方 API",
+   "icon": "openai.svg"
+  },
+  {
+   "name": "Baidu Qianfan Coding Plan",
+   "category": "cn_official",
+   "endpoint": "https://qianfan.baidubce.com/v2/coding/chat/completions",
+   "model": "qianfan-code-latest",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://cloud.baidu.com/product/qianfan_modelbuilder",
+   "apiKeyURL": "https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application",
+   "models": [
+    "qianfan-code-latest"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "baidu.svg"
+  },
+  {
+   "name": "Baidu Qianfan Token Plan",
+   "category": "cn_official",
+   "endpoint": "https://qianfan.baidubce.com/v2/tokenplan/personal/chat/completions",
+   "model": "deepseek-v4-pro",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://cloud.baidu.com/product/codingplan.html",
+   "apiKeyURL": "https://console.bce.baidu.com/qianfan/resource/token-plan",
+   "models": [
+    "deepseek-v4-pro",
+    "deepseek-v4-flash",
+    "deepseek-v4-flash-0731",
+    "glm-5.2",
+    "glm-5.1",
+    "kimi-k2.6"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "baidu.svg"
+  },
+  {
+   "name": "Bailian",
+   "category": "cn_official",
+   "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
+   "model": "qwen3-coder-plus",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "{\"enable_thinking\": false}",
+   "website": "https://bailian.console.aliyun.com",
+   "apiKeyURL": "https://bailian.console.aliyun.com/#/api-key",
+   "models": [
+    "qwen3-coder-plus"
+   ],
+   "verified": false,
+   "note": "通义兼容模式；enable_thinking 关思考",
+   "icon": "bailian.svg"
+  },
+  {
+   "name": "BaiLing",
+   "category": "cn_official",
+   "endpoint": "https://api.tbox.cn/api/llm/v1/chat/completions",
+   "model": "Ling-2.6-1T",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://alipaytbox.yuque.com/sxs0ba/ling/get_started",
+   "apiKeyURL": "https://ling.tbox.cn/open",
+   "models": [
+    "Ling-2.6-1T"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": null
+  },
+  {
+   "name": "DeepSeek",
+   "category": "cn_official",
+   "endpoint": "https://api.deepseek.com/chat/completions",
+   "model": "deepseek-v4-pro",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://platform.deepseek.com",
+   "apiKeyURL": "https://platform.deepseek.com/api_keys",
+   "models": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro"
+   ],
+   "verified": true,
+   "measured": "1.6–4.0",
+   "note": "2026-09-10 实测",
+   "icon": "deepseek.svg"
+  },
+  {
+   "name": "DouBaoSeed",
+   "category": "cn_official",
+   "endpoint": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
+   "model": "doubao-seed-2-1-pro-260615",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "{\"thinking\": {\"type\": \"disabled\"}}",
+   "website": "https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey?apikey=%7B%7D&utm_campaign=hw&utm_content=ccswitch&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=ccswitch",
+   "apiKeyURL": "https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey?apikey=%7B%7D&utm_campaign=hw&utm_content=ccswitch&utm_medium=devrel_tool_web&utm_source=OWO&utm_term=ccswitch",
+   "models": [
+    "doubao-seed-2-1-pro-260628"
+   ],
+   "verified": false,
+   "note": "火山方舟；未实测",
+   "icon": "doubao.svg"
+  },
+  {
+   "name": "Kimi",
+   "category": "cn_official",
+   "endpoint": "https://api.moonshot.cn/v1/chat/completions",
+   "model": "kimi-k2.6",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://platform.kimi.com?aff=cc-switch",
+   "apiKeyURL": "https://platform.kimi.com/console/api-keys?aff=cc-switch",
+   "models": [
+    "kimi-k2.6",
+    "kimi-k2.7-code",
+    "kimi-k2.7-code-highspeed",
+    "kimi-k3"
+   ],
+   "verified": true,
+   "measured": "3.3–5.3",
+   "note": "2026-09-10 实测 k2.6 关思考 3–5 秒；k2.7-code／k3 关不掉思考",
+   "icon": "kimi.svg"
+  },
+  {
+   "name": "Kimi For Coding",
+   "category": "cn_official",
+   "endpoint": "https://api.kimi.com/coding/v1/chat/completions",
+   "model": "kimi-for-coding",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://www.kimi.com/code/?aff=cc-switch",
+   "apiKeyURL": "https://www.kimi.com/code/?aff=cc-switch",
+   "models": [
+    "kimi-for-coding",
+    "kimi-for-coding-highspeed",
+    "k3",
+    "k3-256k"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "kimi.svg"
+  },
+  {
+   "name": "Longcat",
+   "category": "cn_official",
+   "endpoint": "https://api.longcat.chat/openai/v1/chat/completions",
+   "model": "LongCat-2.0",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://longcat.chat/platform",
+   "apiKeyURL": "https://longcat.chat/platform/api_keys",
+   "models": [
+    "LongCat-2.0"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": "longcat-color.svg"
+  },
+  {
+   "name": "MiniMax",
+   "category": "cn_official",
+   "endpoint": "https://api.minimaxi.com/v1/chat/completions",
+   "model": "MiniMax-M3",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.minimaxi.com",
+   "apiKeyURL": "https://platform.minimaxi.com/subscribe/coding-plan",
+   "models": [
+    "MiniMax-M3"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": "minimax.svg"
+  },
+  {
+   "name": "MiniMax en",
+   "category": "cn_official",
+   "endpoint": "https://api.minimax.io/v1/chat/completions",
+   "model": "MiniMax-M3",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.minimax.io",
+   "apiKeyURL": "https://platform.minimax.io/subscribe/coding-plan",
+   "models": [
+    "MiniMax-M3"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": "minimax.svg"
+  },
+  {
+   "name": "QwenCloud",
+   "category": "cn_official",
+   "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+   "model": "qwen3.7-max",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "{\"enable_thinking\": false}",
+   "website": "https://www.qwencloud.com",
+   "apiKeyURL": "https://home.qwencloud.com/api-keys",
+   "models": [
+    "qwen3.7-max",
+    "qwen3.7-plus",
+    "qwen3.6-plus"
+   ],
+   "verified": false,
+   "note": "国际区兼容模式",
+   "icon": "qwen.svg"
+  },
+  {
+   "name": "QwenCloud For Coding",
+   "category": "cn_official",
+   "endpoint": "https://coding-intl.dashscope.aliyuncs.com/v1/chat/completions",
+   "model": "qwen3.7-plus",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://www.qwencloud.com",
+   "apiKeyURL": "https://home.qwencloud.com/api-keys",
+   "models": [
+    "qwen3.7-plus",
+    "qwen3.6-plus",
+    "qwen3-coder-plus"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "qwen.svg"
+  },
+  {
+   "name": "StepFun",
+   "category": "cn_official",
+   "endpoint": "https://api.stepfun.com/step_plan/v1/chat/completions",
+   "model": "step-3.7-flash",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.stepfun.com/step-plan",
+   "apiKeyURL": "https://platform.stepfun.com/interface-key",
+   "models": [
+    "step-3.7-flash",
+    "step-3.5-flash-2603",
+    "step-3.5-flash"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "stepfun.svg"
+  },
+  {
+   "name": "StepFun en",
+   "category": "cn_official",
+   "endpoint": "https://api.stepfun.ai/step_plan/v1/chat/completions",
+   "model": "step-3.7-flash",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.stepfun.ai/step-plan",
+   "apiKeyURL": "https://platform.stepfun.ai/interface-key",
+   "models": [
+    "step-3.7-flash",
+    "step-3.5-flash-2603",
+    "step-3.5-flash"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "stepfun.svg"
+  },
+  {
+   "name": "Tencent Hunyuan",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub.tencentmaas.com/v1/chat/completions",
+   "model": "hy3",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://cloud.tencent.com/product/tokenhub",
+   "apiKeyURL": "https://console.cloud.tencent.com/tokenhub/apikey",
+   "models": [
+    "hy3",
+    "hy3-preview"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": "hunyuan.svg"
+  },
+  {
+   "name": "Tencent Token Plan",
+   "category": "cn_official",
+   "endpoint": "https://api.lkeap.cloud.tencent.com/plan/v3/chat/completions",
+   "model": "tc-code-latest",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://cloud.tencent.com/product/tokenhub",
+   "apiKeyURL": "https://console.cloud.tencent.com/tokenhub/tokenplan",
+   "models": [
+    "tc-code-latest",
+    "deepseek-v4-flash-202605",
+    "deepseek-v4-pro-202606",
+    "minimax-m2.7",
+    "glm-5",
+    "glm-5.1",
+    "glm-5.2",
+    "hy3",
+    "hy3-preview"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Tencent Token Plan (Intl)",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub-intl.tencentcloudmaas.com/plan/v3/chat/completions",
+   "model": "auto",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://www.tencentcloud.com/products/tokenhub",
+   "apiKeyURL": "https://console.tencentcloud.com/tokenhub/tokenplan",
+   "models": [
+    "auto",
+    "glm-5.2",
+    "kimi-k2.6",
+    "deepseek-v4-pro-202606",
+    "deepseek-v4-flash-202605",
+    "minimax-m3"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Tencent Token Plan Enterprise Lite",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub.tencentmaas.com/plan/v3/chat/completions",
+   "model": "auto",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://cloud.tencent.com/product/tokenhub",
+   "apiKeyURL": "https://console.cloud.tencent.com/tokenhub/tokenplan-e",
+   "models": [
+    "auto"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Tencent Token Plan Enterprise Lite (Intl)",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub-intl.tencentcloudmaas.com/plan/v3/chat/completions",
+   "model": "auto",
+   "reasoningEffort": "",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://www.tencentcloud.com/products/tokenhub",
+   "apiKeyURL": "https://console.tencentcloud.com/tokenhub/tokenplan-e",
+   "models": [
+    "auto"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Tencent Token Plan Enterprise Pro",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub.tencentmaas.com/plan/v3/chat/completions",
+   "model": "auto",
+   "reasoningEffort": "low",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://cloud.tencent.com/product/tokenhub",
+   "apiKeyURL": "https://console.cloud.tencent.com/tokenhub/tokenplan-e",
+   "models": [
+    "auto",
+    "glm-5.3",
+    "glm-5.2",
+    "glm-5",
+    "glm-5.1",
+    "glm-5-turbo",
+    "kimi-k2.7-code",
+    "kimi-k2.7-code-highspeed",
+    "kimi-k2.6",
+    "minimax-m2.7",
+    "minimax-m3",
+    "deepseek-v4-flash",
+    "deepseek-v4-pro",
+    "deepseek-v4-flash-0731",
+    "deepseek-v4-pro-0813",
+    "deepseek-v4-flash-202605",
+    "deepseek-v4-pro-202606"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Tencent Token Plan Enterprise Pro (Intl)",
+   "category": "cn_official",
+   "endpoint": "https://tokenhub-intl.tencentcloudmaas.com/plan/v3/chat/completions",
+   "model": "auto",
+   "reasoningEffort": "low",
+   "thinking": "disabled",
+   "extraParameters": "",
+   "website": "https://www.tencentcloud.com/products/tokenhub",
+   "apiKeyURL": "https://console.tencentcloud.com/tokenhub/tokenplan-e",
+   "models": [
+    "auto",
+    "glm-5.3",
+    "glm-5.2",
+    "minimax-m3",
+    "kimi-k2.7-code",
+    "kimi-k2.7-code-highspeed",
+    "deepseek-v4-flash",
+    "deepseek-v4-pro",
+    "deepseek-v4-flash-0731",
+    "deepseek-v4-pro-0813",
+    "deepseek-v4-flash-202605",
+    "deepseek-v4-pro-202606"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "tencent.svg"
+  },
+  {
+   "name": "Xiaomi MiMo",
+   "category": "cn_official",
+   "endpoint": "https://api.xiaomimimo.com/v1/chat/completions",
+   "model": "mimo-v2.5-pro",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://platform.xiaomimimo.com",
+   "apiKeyURL": "https://platform.xiaomimimo.com/#/console/api-keys",
+   "models": [
+    "mimo-v2.5-pro",
+    "mimo-v2.5"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": null
+  },
+  {
+   "name": "Zhipu GLM",
+   "category": "cn_official",
+   "endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+   "model": "glm-5.3",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://open.bigmodel.cn",
+   "apiKeyURL": "https://www.bigmodel.cn/claude-code?ic=RRVJPB5SII",
+   "models": [
+    "glm-5.3",
+    "glm-5-turbo"
+   ],
+   "verified": false,
+   "note": "GLM-5.3 只认 reasoning_effort",
+   "icon": "zhipu.svg"
+  },
+  {
+   "name": "Zhipu GLM en",
+   "category": "cn_official",
+   "endpoint": "https://api.z.ai/api/paas/v4/chat/completions",
+   "model": "glm-5.3",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://z.ai",
+   "apiKeyURL": "https://z.ai/subscribe?ic=8JVLJQFSKB",
+   "models": [
+    "glm-5.3"
+   ],
+   "verified": false,
+   "note": "GLM-5.3 只认 reasoning_effort",
+   "icon": "zhipu.svg"
+  },
+  {
+   "name": "AiHubMix",
+   "category": "aggregator",
+   "endpoint": "https://aihubmix.com/v1/chat/completions",
+   "model": "deepseek-v4-pro",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://aihubmix.com",
+   "apiKeyURL": null,
+   "models": [],
+   "verified": false,
+   "note": "聚合服务，模型 id 以其目录为准",
+   "icon": "aihubmix-color.svg"
+  },
+  {
+   "name": "AtlasCloud",
+   "category": "aggregator",
+   "endpoint": "https://api.atlascloud.ai/v1/chat/completions",
+   "model": "zai-org/glm-5.1",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://www.atlascloud.ai/console/coding-plan",
+   "apiKeyURL": "https://www.atlascloud.ai/console/coding-plan",
+   "models": [
+    "zai-org/glm-5.1"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "atlascloud_icon.png"
+  },
+  {
+   "name": "GLM-5.3 (sophnet)",
+   "category": "aggregator",
+   "endpoint": "https://www.sophnet.com/api/open-apis/v1/chat/completions",
+   "model": "GLM-5.3",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://www.sophnet.com",
+   "apiKeyURL": null,
+   "models": [
+    "GLM-5.3"
+   ],
+   "verified": true,
+   "measured": "2.3–19.3",
+   "note": "2026-09-10 实测",
+   "icon": null
+  },
+  {
+   "name": "Hugging Face 路由",
+   "category": "aggregator",
+   "endpoint": "https://router.huggingface.co/v1/chat/completions",
+   "model": "deepseek-ai/DeepSeek-V4",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://huggingface.co/inference",
+   "apiKeyURL": "https://huggingface.co/settings/tokens",
+   "models": [],
+   "verified": false,
+   "note": "模型 id 为 HF 仓库名；未实测",
+   "icon": "huggingface.svg"
+  },
+  {
+   "name": "JieKou AI",
+   "category": "aggregator",
+   "endpoint": "https://api.jiekou.ai/openai/v1/chat/completions",
+   "model": "claude-fable-5",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://jiekou.ai/#model-library",
+   "apiKeyURL": "https://jiekou.ai/settings/key-management",
+   "models": [
+    "claude-fable-5"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": null
+  },
+  {
+   "name": "ModelScope",
+   "category": "aggregator",
+   "endpoint": "https://api-inference.modelscope.cn/v1/chat/completions",
+   "model": "ZhipuAI/GLM-5.2",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://modelscope.cn",
+   "apiKeyURL": "https://modelscope.cn/my/myaccesstoken",
+   "models": [
+    "ZhipuAI/GLM-5.2"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "modelscope-color.svg"
+  },
+  {
+   "name": "Novita AI",
+   "category": "aggregator",
+   "endpoint": "https://api.novita.ai/openai/v1/chat/completions",
+   "model": "zai-org/glm-5.1",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "{\"enable_thinking\": false}",
+   "website": "https://novita.ai",
+   "apiKeyURL": "https://novita.ai",
+   "models": [
+    "zai-org/glm-5.1"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "novita.svg"
+  },
+  {
+   "name": "Nvidia",
+   "category": "aggregator",
+   "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+   "model": "moonshotai/kimi-k2.5",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://build.nvidia.com",
+   "apiKeyURL": "https://build.nvidia.com/settings/api-keys",
+   "models": [
+    "moonshotai/kimi-k2.5"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "nvidia.svg"
+  },
+  {
+   "name": "OpenRouter",
+   "category": "aggregator",
+   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+   "model": "deepseek/deepseek-v4-pro",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://openrouter.ai",
+   "apiKeyURL": "https://openrouter.ai/keys",
+   "models": [],
+   "verified": false,
+   "note": "聚合服务，模型 id 以其目录为准",
+   "icon": "openrouter.svg"
+  },
+  {
+   "name": "PPIO",
+   "category": "aggregator",
+   "endpoint": "https://api.ppio.com/openai/v1/chat/completions",
+   "model": "deepseek/deepseek-v4-flash-0731",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://ppio.com",
+   "apiKeyURL": "https://ppio.com/activity/ccswitch",
+   "models": [
+    "deepseek/deepseek-v4-flash-0731"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "ppio.svg"
+  },
+  {
+   "name": "SiliconFlow",
+   "category": "aggregator",
+   "endpoint": "https://api.siliconflow.cn/v1/chat/completions",
+   "model": "Pro/MiniMaxAI/MiniMax-M2.5",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://siliconflow.cn",
+   "apiKeyURL": "https://cloud.siliconflow.cn/i/YflgU2Ve",
+   "models": [
+    "Pro/MiniMaxAI/MiniMax-M2.5"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "siliconflow.svg"
+  },
+  {
+   "name": "SiliconFlow en",
+   "category": "aggregator",
+   "endpoint": "https://api.siliconflow.com/v1/chat/completions",
+   "model": "MiniMaxAI/MiniMax-M3",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://siliconflow.com",
+   "apiKeyURL": "https://cloud.siliconflow.cn/i/YflgU2Ve",
+   "models": [
+    "MiniMaxAI/MiniMax-M3"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "siliconflow.svg"
+  },
+  {
+   "name": "OpenCode Go",
+   "category": "third_party",
+   "endpoint": "https://opencode.ai/zen/go/v1/chat/completions",
+   "model": "glm-5.2",
+   "reasoningEffort": "low",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://opencode.ai/go",
+   "apiKeyURL": "https://opencode.ai/go?ref=2YTRG2NGTX",
+   "models": [
+    "glm-5.2",
+    "glm-5.1",
+    "kimi-k2.7-code",
+    "deepseek-v4-pro",
+    "deepseek-v4-flash",
+    "mimo-v2.5-pro"
+   ],
+   "verified": false,
+   "note": "CC Switch 标为 Chat Completions",
+   "icon": "opencode-logo-light.svg"
+  },
+  {
+   "name": "xAI (Grok)",
+   "category": "third_party",
+   "endpoint": "https://api.x.ai/v1/chat/completions",
+   "model": "grok-4.5",
+   "reasoningEffort": "",
+   "thinking": "auto",
+   "extraParameters": "",
+   "website": "https://x.ai/api",
+   "apiKeyURL": "https://console.x.ai",
+   "models": [
+    "grok-4.5"
+   ],
+   "verified": false,
+   "note": "未实测",
+   "icon": "xai.svg"
+  }
+ ]
+}

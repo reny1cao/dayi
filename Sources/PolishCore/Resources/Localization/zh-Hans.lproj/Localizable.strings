@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key> · 下一次按 %@ 起生效</key>
+	<string> · 下一次按 %@ 起生效</string>
+	<key> 秒 · </key>
+	<string> 秒 · </string>
+	<key>%@ 天后</key>
+	<string>%@ 天后</string>
+	<key>%@ 字</key>
+	<string>%@ 字</string>
+	<key>%@ 字 · %@</key>
+	<string>%@ 字 · %@</string>
+	<key>%@ 家服务商可选，其中 %@ 家在达意里实测过。</key>
+	<string>%@ 家服务商可选，其中 %@ 家在达意里实测过。</string>
+	<key>%@ 已经是「%@」的快捷键。</key>
+	<string>%@ 已经是「%@」的快捷键。</string>
+	<key>%@ 未能注册，多半已被其他应用占用；仍然是 %@。</key>
+	<string>%@ 未能注册，多半已被其他应用占用；仍然是 %@。</string>
+	<key>%@ 条</key>
+	<string>%@ 条</string>
+	<key>%@ 条中 %@ 条从未发过请求</key>
+	<string>%@ 条中 %@ 条从未发过请求</string>
+	<key>%@ 的润色请求未完成</key>
+	<string>%@ 的润色请求未完成</string>
+	<key>%@ 的润色请求未完成。</key>
+	<string>%@ 的润色请求未完成。</string>
+	<key>%@ 的焦点不在可润色的文字输入区</key>
+	<string>%@ 的焦点不在可润色的文字输入区</string>
+	<key>%@ 秒</key>
+	<string>%@ 秒</string>
+	<key>%@ 里没有找到输入焦点 · 点进输入框再按</key>
+	<string>%@ 里没有找到输入焦点 · 点进输入框再按</string>
+	<key>%@快捷键 %@</key>
+	<string>%@快捷键 %@</string>
+	<key>%@，%@ 条</key>
+	<string>%@，%@ 条</string>
+	<key>%@，全局快捷键 %@</key>
+	<string>%@，全局快捷键 %@</string>
+	<key>%@，空</key>
+	<string>%@，空</string>
+	<key>2026-09-10 实测</key>
+	<string>2026-09-10 实测</string>
+	<key>2026-09-10 实测 k2.6 关思考 3–5 秒；k2.7-code／k3 关不掉思考</key>
+	<string>2026-09-10 实测 k2.6 关思考 3–5 秒；k2.7-code／k3 关不掉思考</string>
+	<key>CC Switch 标为 Chat Completions</key>
+	<string>CC Switch 标为 Chat Completions</string>
+	<key>Chat Completions 地址</key>
+	<string>Chat Completions 地址</string>
+	<key>Dayi 窗口在最前面。请切回目标应用并把光标放进输入框，再按 ⌃⌥P。</key>
+	<string>Dayi 窗口在最前面。请切回目标应用并把光标放进输入框，再按 ⌃⌥P。</string>
+	<key>Dayi 自定义润色</key>
+	<string>Dayi 自定义润色</string>
+	<key>Dayi 默认润色</key>
+	<string>Dayi 默认润色</string>
+	<key>DeepSeek 与 Kimi 只认 thinking: {type: disabled}；它们收下 reasoning_effort 但照常思考。</key>
+	<string>DeepSeek 与 Kimi 只认 thinking: {type: disabled}；它们收下 reasoning_effort 但照常思考。</string>
+	<key>GLM-5.3 关不掉思考，只认 reasoning_effort: low；两个字段可以同时发，各家只取自己认的那个。</key>
+	<string>GLM-5.3 关不掉思考，只认 reasoning_effort: low；两个字段可以同时发，各家只取自己认的那个。</string>
+	<key>GLM-5.3 只认 reasoning_effort</key>
+	<string>GLM-5.3 只认 reasoning_effort</string>
+	<key>POLISH_ENDPOINT 必须为不含凭据或查询参数的 HTTPS URL</key>
+	<string>POLISH_ENDPOINT 必须为不含凭据或查询参数的 HTTPS URL</string>
+	<key>{input} 会替换为待润色内容，必须且只能出现一次。</key>
+	<string>{input} 会替换为待润色内容，必须且只能出现一次。</string>
+	<key>⌘X 通常用于剪切。启用后，Dayi 会在其他应用中占用这个组合，普通剪切可能无法使用。仍要将它设为「%@」吗？</key>
+	<string>⌘X 通常用于剪切。启用后，Dayi 会在其他应用中占用这个组合，普通剪切可能无法使用。仍要将它设为「%@」吗？</string>
+	<key>「%@」里没有记录</key>
+	<string>「%@」里没有记录</string>
+	<key>上下文已失效</key>
+	<string>上下文已失效</string>
+	<key>下次启动达意时生效。界面语言不改变润色结果的语言。</key>
+	<string>下次启动达意时生效。界面语言不改变润色结果的语言。</string>
+	<key>不占用 ⌘Z</key>
+	<string>不占用 ⌘Z</string>
+	<key>不支持</key>
+	<string>不支持</string>
+	<key>不清除</key>
+	<string>不清除</string>
+	<key>不限时长</key>
+	<string>不限时长</string>
+	<key>不限条数</key>
+	<string>不限条数</string>
+	<key>中国官方</key>
+	<string>中国官方</string>
+	<key>之后只留下这条记录本身</key>
+	<string>之后只留下这条记录本身</string>
+	<key>从目录添加…</key>
+	<string>从目录添加…</string>
+	<key>位置</key>
+	<string>位置</string>
+	<key>使用 ⌘X</key>
+	<string>使用 ⌘X</string>
+	<key>保存后下一次按 %@ 起生效，不用重启</key>
+	<string>保存后下一次按 %@ 起生效，不用重启</string>
+	<key>保存并启用</key>
+	<string>保存并启用</string>
+	<key>保存时存进钥匙串</key>
+	<string>保存时存进钥匙串</string>
+	<key>保存的快捷键没能注册，已回到 %@ / %@。</key>
+	<string>保存的快捷键没能注册，已回到 %@ / %@。</string>
+	<key>保留策略没能写进设置，下次启动会回到上一次保存的那份。</key>
+	<string>保留策略没能写进设置，下次启动会回到上一次保存的那份。</string>
+	<key>保留记录</key>
+	<string>保留记录</string>
+	<key>修改仅保存在本机，保存后用于下一次润色；正在处理的任务不受影响。</key>
+	<string>修改仅保存在本机，保存后用于下一次润色；正在处理的任务不受影响。</string>
+	<key>全局，覆盖其他应用</key>
+	<string>全局，覆盖其他应用</string>
+	<key>全部 %@</key>
+	<string>全部 %@</string>
+	<key>全部活动</key>
+	<string>全部活动</string>
+	<key>关闭思考</key>
+	<string>关闭思考</string>
+	<key>写入不确定</key>
+	<string>写入不确定</string>
+	<key>写入违反数据约束：%@</key>
+	<string>写入违反数据约束：%@</string>
+	<key>切到 %@ 并应用</key>
+	<string>切到 %@ 并应用</string>
+	<key>刚刚清理 %@ 条，清空正文 %@ 条</key>
+	<string>刚刚清理 %@ 条，清空正文 %@ 条</string>
+	<key>删除 %@ 条记录</key>
+	<string>删除 %@ 条记录</string>
+	<key>删除记录</key>
+	<string>删除记录</string>
+	<key>删除这 %@ 条</key>
+	<string>删除这 %@ 条</string>
+	<key>删除这条</key>
+	<string>删除这条</string>
+	<key>删除选中记录</key>
+	<string>删除选中记录</string>
+	<key>刷新模型</key>
+	<string>刷新模型</string>
+	<key>升序</key>
+	<string>升序</string>
+	<key>历史</key>
+	<string>历史</string>
+	<key>历史保存在 %@。</key>
+	<string>历史保存在 %@。</string>
+	<key>历史保存在 %@：超过 %@ 天或 %@ 条的记录会删除，正文在 %@ 天后清除。</key>
+	<string>历史保存在 %@：超过 %@ 天或 %@ 条的记录会删除，正文在 %@ 天后清除。</string>
+	<key>历史只保存在内存中。</key>
+	<string>历史只保存在内存中。</string>
+	<key>历史数据库尚未打开，稍后再保存</key>
+	<string>历史数据库尚未打开，稍后再保存</string>
+	<key>历史记录未能保存</key>
+	<string>历史记录未能保存</string>
+	<key>历史记录未能保存。</key>
+	<string>历史记录未能保存。</string>
+	<key>原应用已退出。</key>
+	<string>原应用已退出。</string>
+	<key>原文</key>
+	<string>原文</string>
+	<key>原文已恢复</key>
+	<string>原文已恢复</string>
+	<key>原文本已变化，未覆盖新内容。</key>
+	<string>原文本已变化，未覆盖新内容。</string>
+	<key>原生</key>
+	<string>原生</string>
+	<key>原输入区已不可用（窗口或页面已改变）。</key>
+	<string>原输入区已不可用（窗口或页面已改变）。</string>
+	<key>取消</key>
+	<string>取消</string>
+	<key>可刷新在线模型列表，也可手动输入 ID；列表不代表已通过润色测试。</key>
+	<string>可刷新在线模型列表，也可手动输入 ID；列表不代表已通过润色测试。</string>
+	<key>名称</key>
+	<string>名称</string>
+	<key>后台写回</key>
+	<string>后台写回</string>
+	<key>唤醒中</key>
+	<string>唤醒中</string>
+	<key>回到原位重试</key>
+	<string>回到原位重试</string>
+	<key>国际区兼容模式</key>
+	<string>国际区兼容模式</string>
+	<key>国际官方</key>
+	<string>国际官方</string>
+	<key>图标关掉后 %@ 照常工作，但设置只能从活动窗口打开。</key>
+	<string>图标关掉后 %@ 照常工作，但设置只能从活动窗口打开。</string>
+	<key>在任何应用的输入区选中文字，按下快捷键。
+达意会就地改写，并保留一次专用撤回。</key>
+	<string>在任何应用的输入区选中文字，按下快捷键。
+达意会就地改写，并保留一次专用撤回。</string>
+	<key>在系统设置中查看</key>
+	<string>在系统设置中查看</string>
+	<key>地址</key>
+	<string>地址</string>
+	<key>复制润色结果</key>
+	<string>复制润色结果</string>
+	<key>复制结果</key>
+	<string>复制结果</string>
+	<key>失败</key>
+	<string>失败</string>
+	<key>存在钥匙串</key>
+	<string>存在钥匙串</string>
+	<key>官方 API</key>
+	<string>官方 API</string>
+	<key>官方注明兼容层面向测试；单段文本改写够用</key>
+	<string>官方注明兼容层面向测试；单段文本改写够用</string>
+	<key>实测</key>
+	<string>实测</string>
+	<key>实测耗时</key>
+	<string>实测耗时</string>
+	<key>将 ⌘X 用作全局快捷键？</key>
+	<string>将 ⌘X 用作全局快捷键？</string>
+	<key>尚未选择模型</key>
+	<string>尚未选择模型</string>
+	<key>就绪</key>
+	<string>就绪</string>
+	<key>尾延迟大</key>
+	<string>尾延迟大</string>
+	<key>尾延迟大：最慢一次约 </key>
+	<string>尾延迟大：最慢一次约 </string>
+	<key>展开</key>
+	<string>展开</string>
+	<key>已保存并启用</key>
+	<string>已保存并启用</string>
+	<key>已保存的模型配置无效</key>
+	<string>已保存的模型配置无效</string>
+	<key>已保存的配置</key>
+	<string>已保存的配置</string>
+	<key>已保存，下一次润色生效。</key>
+	<string>已保存，下一次润色生效。</string>
+	<key>已停止自动操作</key>
+	<string>已停止自动操作</string>
+	<key>已写入</key>
+	<string>已写入</string>
+	<key>已写回 %@ 原位 · 回读一致。</key>
+	<string>已写回 %@ 原位 · 回读一致。</string>
+	<key>已发出请求</key>
+	<string>已发出请求</string>
+	<key>已发出请求，正在润色 %@ 的选区。</key>
+	<string>已发出请求，正在润色 %@ 的选区。</string>
+	<key>已实测</key>
+	<string>已实测</string>
+	<key>已应用</key>
+	<string>已应用</string>
+	<key>已恢复 %@ 的原文。</key>
+	<string>已恢复 %@ 的原文。</string>
+	<key>已授权</key>
+	<string>已授权</string>
+	<key>已撤回</key>
+	<string>已撤回</string>
+	<key>已撤回 %@ 的替换</key>
+	<string>已撤回 %@ 的替换</string>
+	<key>已替换</key>
+	<string>已替换</string>
+	<key>已替换 %@ 的选区</key>
+	<string>已替换 %@ 的选区</string>
+	<key>已选 %@ 条记录</key>
+	<string>已选 %@ 条记录</string>
+	<key>常驻显示状态图标</key>
+	<string>常驻显示状态图标</string>
+	<key>应用</key>
+	<string>应用</string>
+	<key>应用资源包</key>
+	<string>应用资源包</string>
+	<key>应用退出时任务未完成。</key>
+	<string>应用退出时任务未完成。</string>
+	<key>应用退出时正在写回，无法确认结果。</key>
+	<string>应用退出时正在写回，无法确认结果。</string>
+	<key>当前 %@ 条 · ⇧⌘⌫</key>
+	<string>当前 %@ 条 · ⇧⌘⌫</string>
+	<key>当前使用 Dayi 默认提示词</key>
+	<string>当前使用 Dayi 默认提示词</string>
+	<key>当前使用本机自定义提示词</key>
+	<string>当前使用本机自定义提示词</string>
+	<key>当前焦点不是可润色的文本输入区。</key>
+	<string>当前焦点不是可润色的文本输入区。</string>
+	<key>待处理 ×%@</key>
+	<string>待处理 ×%@</string>
+	<key>待应用</key>
+	<string>待应用</string>
+	<key>快捷键已生效，但没能写进设置：下次启动会回到 %@。</key>
+	<string>快捷键已生效，但没能写进设置：下次启动会回到 %@。</string>
+	<key>快捷键当前没有注册，保存的组合要等下次启动才会生效。</key>
+	<string>快捷键当前没有注册，保存的组合要等下次启动才会生效。</string>
+	<key>快捷键当前没有注册，改动要等下次启动才会生效。</key>
+	<string>快捷键当前没有注册，改动要等下次启动才会生效。</string>
+	<key>快捷键未注册</key>
+	<string>快捷键未注册</string>
+	<key>快捷键未注册 · 没有覆盖其他应用的快捷键</key>
+	<string>快捷键未注册 · 没有覆盖其他应用的快捷键</string>
+	<key>思考控制、额外参数</key>
+	<string>思考控制、额外参数</string>
+	<key>思考控制、额外参数 · 已按 %@ 预填</key>
+	<string>思考控制、额外参数 · 已按 %@ 预填</string>
+	<key>恢复默认内容</key>
+	<string>恢复默认内容</string>
+	<key>或</key>
+	<string>或</string>
+	<key>打开系统设置</key>
+	<string>打开系统设置</string>
+	<key>打开设置…</key>
+	<string>打开设置…</string>
+	<key>按下…</key>
+	<string>按下…</string>
+	<key>按列排序</key>
+	<string>按列排序</string>
+	<key>按新的保留策略清理时出错。</key>
+	<string>按新的保留策略清理时出错。</string>
+	<key>排序</key>
+	<string>排序</string>
+	<key>排序依据</key>
+	<string>排序依据</string>
+	<key>提示词</key>
+	<string>提示词</string>
+	<key>搜索名称或模型 id</key>
+	<string>搜索名称或模型 id</string>
+	<key>搜索模型 ID 或名称</key>
+	<string>搜索模型 ID 或名称</string>
+	<key>搜索范围是原文与润色结果，正文清除后不再可搜。</key>
+	<string>搜索范围是原文与润色结果，正文清除后不再可搜。</string>
+	<key>搜索记录</key>
+	<string>搜索记录</string>
+	<key>搜索记录（⌘F）</key>
+	<string>搜索记录（⌘F）</string>
+	<key>撤回</key>
+	<string>撤回</string>
+	<key>撤回替换</key>
+	<string>撤回替换</string>
+	<key>撤回最近一次</key>
+	<string>撤回最近一次</string>
+	<key>撤回要求受保护前缀未变；已实现范围内的后缀编辑允许，冲突时保留现状。</key>
+	<string>撤回要求受保护前缀未变；已实现范围内的后缀编辑允许，冲突时保留现状。</string>
+	<key>撤销未保存修改</key>
+	<string>撤销未保存修改</string>
+	<key>支持</key>
+	<string>支持</string>
+	<key>收起</key>
+	<string>收起</string>
+	<key>数据库文件已损坏：%@</key>
+	<string>数据库文件已损坏：%@</string>
+	<key>数据库正被其他连接写入，本次操作未执行。</key>
+	<string>数据库正被其他连接写入，本次操作未执行。</string>
+	<key>数据库结构版本为 %@，高于本版本支持的 %@；请升级应用后再打开。</key>
+	<string>数据库结构版本为 %@，高于本版本支持的 %@；请升级应用后再打开。</string>
+	<key>数据库读写失败：%@</key>
+	<string>数据库读写失败：%@</string>
+	<key>数据库错误 %@：%@</key>
+	<string>数据库错误 %@：%@</string>
+	<key>无可用正文</key>
+	<string>无可用正文</string>
+	<key>无法安全撤回这次替换。</key>
+	<string>无法安全撤回这次替换。</string>
+	<key>无法应用结果。</key>
+	<string>无法应用结果。</string>
+	<key>无法打开数据库文件：%@</key>
+	<string>无法打开数据库文件：%@</string>
+	<key>无法确定要润色的文本，请先在输入区选中它。</key>
+	<string>无法确定要润色的文本，请先在输入区选中它。</string>
+	<key>无法确认写入结果 · 已停止自动操作</key>
+	<string>无法确认写入结果 · 已停止自动操作</string>
+	<key>无法确认写入结果；已停止自动操作。</key>
+	<string>无法确认写入结果；已停止自动操作。</string>
+	<key>无法确认写回 %@ 的结果；已停止自动操作。</key>
+	<string>无法确认写回 %@ 的结果；已停止自动操作。</string>
+	<key>无法读取自定义提示词，当前使用默认内容：</key>
+	<string>无法读取自定义提示词，当前使用默认内容：</string>
+	<key>时间</key>
+	<string>时间</string>
+	<key>昨天</key>
+	<string>昨天</string>
+	<key>显示</key>
+	<string>显示</string>
+	<key>显示/隐藏边栏</key>
+	<string>显示/隐藏边栏</string>
+	<key>显示名称</key>
+	<string>显示名称</string>
+	<key>显示或隐藏检查器（⌥⌘I）</key>
+	<string>显示或隐藏检查器（⌥⌘I）</string>
+	<key>显示检查器</key>
+	<string>显示检查器</string>
+	<key>最多 %@ 条</key>
+	<string>最多 %@ 条</string>
+	<key>最多条数</key>
+	<string>最多条数</string>
+	<key>最近：%@ · %@</key>
+	<string>最近：%@ · %@</string>
+	<key>最近：%@ · %@ · %@</key>
+	<string>最近：%@ · %@ · %@</string>
+	<key>最长 %@ 天</key>
+	<string>最长 %@ 天</string>
+	<key>服务商</key>
+	<string>服务商</string>
+	<key>服务商没有返回可用模型；可手动输入 ID。</key>
+	<string>服务商没有返回可用模型；可手动输入 ID。</string>
+	<key>未保存</key>
+	<string>未保存</string>
+	<key>未写入</key>
+	<string>未写入</string>
+	<key>未完成</key>
+	<string>未完成</string>
+	<key>未实测</key>
+	<string>未实测</string>
+	<key>未实测 · 地址与参数以服务方文档为准</key>
+	<string>未实测 · 地址与参数以服务方文档为准</string>
+	<key>未授权</key>
+	<string>未授权</string>
+	<key>未授权辅助功能</key>
+	<string>未授权辅助功能</string>
+	<key>未能写入原输入区。</key>
+	<string>未能写入原输入区。</string>
+	<key>未选择服务商</key>
+	<string>未选择服务商</string>
+	<key>未配置模型</key>
+	<string>未配置模型</string>
+	<key>权限</key>
+	<string>权限</string>
+	<key>来源</key>
+	<string>来源</string>
+	<key>查看全部活动</key>
+	<string>查看全部活动</string>
+	<key>检查器</key>
+	<string>检查器</string>
+	<key>检查器一次只讲一条记录。</key>
+	<string>检查器一次只讲一条记录。</string>
+	<key>检查模型设置</key>
+	<string>检查模型设置</string>
+	<key>模型</key>
+	<string>模型</string>
+	<key>模型 id</key>
+	<string>模型 id</string>
+	<key>模型 id 为 HF 仓库名；未实测</key>
+	<string>模型 id 为 HF 仓库名；未实测</string>
+	<key>模型列表已更新；选择后请用真实请求测试。</key>
+	<string>模型列表已更新；选择后请用真实请求测试。</string>
+	<key>模型列表需要 Chat Completions 地址；不支持列表的服务可手动输入模型 ID</key>
+	<string>模型列表需要 Chat Completions 地址；不支持列表的服务可手动输入模型 ID</string>
+	<key>模型地址</key>
+	<string>模型地址</string>
+	<key>模型未记录</key>
+	<string>模型未记录</string>
+	<key>模型没有返回可用文本。</key>
+	<string>模型没有返回可用文本。</string>
+	<key>模型请求失败（HTTP %@）。</key>
+	<string>模型请求失败（HTTP %@）。</string>
+	<key>模型输出未正常完成；未采用不完整结果。</key>
+	<string>模型输出未正常完成；未采用不完整结果。</string>
+	<key>模型返回了无法识别的响应。</key>
+	<string>模型返回了无法识别的响应。</string>
+	<key>模型；请在设置里选一个</key>
+	<string>模型；请在设置里选一个</string>
+	<key>模板占位符</key>
+	<string>模板占位符</string>
+	<key>正在写回 %@ 的选区…</key>
+	<string>正在写回 %@ 的选区…</string>
+	<key>正在写回 %@。</key>
+	<string>正在写回 %@。</string>
+	<key>正在写回原位置</key>
+	<string>正在写回原位置</string>
+	<key>正在唤醒 %@ 的输入区…</key>
+	<string>正在唤醒 %@ 的输入区…</string>
+	<key>正在应用</key>
+	<string>正在应用</string>
+	<key>正在撤回</key>
+	<string>正在撤回</string>
+	<key>正在撤回 %@ 的替换…</key>
+	<string>正在撤回 %@ 的替换…</string>
+	<key>没有产生结果</key>
+	<string>没有产生结果</string>
+	<key>没有匹配「%@」的记录</key>
+	<string>没有匹配「%@」的记录</string>
+	<key>没有可应用的结果。</key>
+	<string>没有可应用的结果。</string>
+	<key>没有可撤回的替换</key>
+	<string>没有可撤回的替换</string>
+	<key>没有找到输入焦点。请先点进要润色的输入框，再按 ⌃⌥P。</key>
+	<string>没有找到输入焦点。请先点进要润色的输入框，再按 ⌃⌥P。</string>
+	<key>没有覆盖其他应用的快捷键。%@</key>
+	<string>没有覆盖其他应用的快捷键。%@</string>
+	<key>活动</key>
+	<string>活动</string>
+	<key>活动窗口</key>
+	<string>活动窗口</string>
+	<key>测试中…</key>
+	<string>测试中…</string>
+	<key>测试失败</key>
+	<string>测试失败</string>
+	<key>测试通过 · %.1f 秒</key>
+	<string>测试通过 · %.1f 秒</string>
+	<key>润色 %@ 的选区…</key>
+	<string>润色 %@ 的选区…</string>
+	<key>润色中</key>
+	<string>润色中</string>
+	<key>润色中 ×%@</key>
+	<string>润色中 ×%@</string>
+	<key>润色后</key>
+	<string>润色后</string>
+	<key>润色请求未完成。</key>
+	<string>润色请求未完成。</string>
+	<key>润色选区</key>
+	<string>润色选区</string>
+	<key>添加自定义服务商</key>
+	<string>添加自定义服务商</string>
+	<key>清空全部 %@ 条记录？</key>
+	<string>清空全部 %@ 条记录？</string>
+	<key>清空历史</key>
+	<string>清空历史</string>
+	<key>清空历史…</key>
+	<string>清空历史…</string>
+	<key>清除搜索</key>
+	<string>清除搜索</string>
+	<key>清除正文</key>
+	<string>清除正文</string>
+	<key>火山方舟；未实测</key>
+	<string>火山方舟；未实测</string>
+	<key>点按后按下新的组合键；⎋ 取消，⌫ 恢复默认 %@</key>
+	<string>点按后按下新的组合键；⎋ 取消，⌫ 恢复默认 %@</string>
+	<key>状态</key>
+	<string>状态</string>
+	<key>用户提示词</key>
+	<string>用户提示词</string>
+	<key>用户提示词必须包含且仅包含一个 {input}</key>
+	<string>用户提示词必须包含且仅包含一个 {input}</string>
+	<key>用真实请求测试</key>
+	<string>用真实请求测试</string>
+	<key>由服务决定</key>
+	<string>由服务决定</string>
+	<key>登录时启动</key>
+	<string>登录时启动</string>
+	<key>登录项未能更改：</key>
+	<string>登录项未能更改：</string>
+	<key>目录 0700 · 文件 0600 · 撤回数据只在内存，退出即失</key>
+	<string>目录 0700 · 文件 0600 · 撤回数据只在内存，退出即失</string>
+	<key>目录来自 CC Switch </key>
+	<string>目录来自 CC Switch </string>
+	<key>目标</key>
+	<string>目标</string>
+	<key>目标应用</key>
+	<string>目标应用</string>
+	<key>空为不发</key>
+	<string>空为不发</string>
+	<key>立即</key>
+	<string>立即</string>
+	<key>第三方中转</key>
+	<string>第三方中转</string>
+	<key>类别</key>
+	<string>类别</string>
+	<key>系统报告的原因：注册失败（%@）。</key>
+	<string>系统报告的原因：注册失败（%@）。</string>
+	<key>系统提示词</key>
+	<string>系统提示词</string>
+	<key>系统提示词不能为空</key>
+	<string>系统提示词不能为空</string>
+	<key>系统设置 → 隐私与安全性 → 辅助功能，勾选这个应用。</key>
+	<string>系统设置 → 隐私与安全性 → 辅助功能，勾选这个应用。</string>
+	<key>结构迁移到版本 %@ 失败：%@</key>
+	<string>结构迁移到版本 %@ 失败：%@</string>
+	<key>结果就绪</key>
+	<string>结果就绪</string>
+	<key>结果就绪，正在写回</key>
+	<string>结果就绪，正在写回</string>
+	<key>结果就绪，正在写回 %@。</key>
+	<string>结果就绪，正在写回 %@。</string>
+	<key>结果已保留，请回到原输入区后应用。</key>
+	<string>结果已保留，请回到原输入区后应用。</string>
+	<key>结果已备好 · 回到 %@ 按</key>
+	<string>结果已备好 · 回到 %@ 按</string>
+	<key>结果已生成，尚未写回</key>
+	<string>结果已生成，尚未写回</string>
+	<key>网站</key>
+	<string>网站</string>
+	<key>网页输入区不支持后台写回 —— 回到 %@ 按 %@。</key>
+	<string>网页输入区不支持后台写回 —— 回到 %@ 按 %@。</string>
+	<key>耗时</key>
+	<string>耗时</string>
+	<key>聚合服务</key>
+	<string>聚合服务</string>
+	<key>聚合服务，模型 id 以其目录为准</key>
+	<string>聚合服务，模型 id 以其目录为准</string>
+	<key>自定义服务商使用 OpenAI Chat Completions 兼容协议</key>
+	<string>自定义服务商使用 OpenAI Chat Completions 兼容协议</string>
+	<key>范围</key>
+	<string>范围</string>
+	<key>获取中…</key>
+	<string>获取中…</string>
+	<key>菜单栏</key>
+	<string>菜单栏</string>
+	<key>记录保存在本机，下次启动自动恢复。</key>
+	<string>记录保存在本机，下次启动自动恢复。</string>
+	<key>记录和正文都会从数据库删除，无法恢复。</key>
+	<string>记录和正文都会从数据库删除，无法恢复。</string>
+	<key>设置…</key>
+	<string>设置…</string>
+	<key>设置… ⌘,</key>
+	<string>设置… ⌘,</string>
+	<key>语言</key>
+	<string>语言</string>
+	<key>请在系统设置 → 隐私与安全性 → 辅助功能中授权 Dayi。</key>
+	<string>请在系统设置 → 隐私与安全性 → 辅助功能中授权 Dayi。</string>
+	<key>请求失败</key>
+	<string>请求失败</string>
+	<key>读取到无法解析的字段：%@。</key>
+	<string>读取到无法解析的字段：%@。</string>
+	<key>跟随系统</key>
+	<string>跟随系统</string>
+	<key>跳回 %@</key>
+	<string>跳回 %@</string>
+	<key>跳回原应用</key>
+	<string>跳回原应用</string>
+	<key>辅助功能</key>
+	<string>辅助功能</string>
+	<key>辅助功能读取失败（AX %@），本次未能确认输入焦点。</key>
+	<string>辅助功能读取失败（AX %@），本次未能确认输入焦点。</string>
+	<key>输入不能为空。</key>
+	<string>输入不能为空。</string>
+	<key>输入区</key>
+	<string>输入区</string>
+	<key>输入区里还没有文字，无法润色。</key>
+	<string>输入区里还没有文字，无法润色。</string>
+	<key>输入示例后显示预览，不会发送网络请求。</key>
+	<string>输入示例后显示预览，不会发送网络请求。</string>
+	<key>输入示例，预览发给模型的用户消息</key>
+	<string>输入示例，预览发给模型的用户消息</string>
+	<key>达意 · %@</key>
+	<string>达意 · %@</string>
+	<key>达意 · 待应用 %@</key>
+	<string>达意 · 待应用 %@</string>
+	<key>达意在最前面 · 切回目标应用再按</key>
+	<string>达意在最前面 · 切回目标应用再按</string>
+	<key>达意还不能读取或替换选区</key>
+	<string>达意还不能读取或替换选区</string>
+	<key>达意还没有辅助功能权限</key>
+	<string>达意还没有辅助功能权限</string>
+	<key>达意，%@</key>
+	<string>达意，%@</string>
+	<key>达意，待应用 %@ 条</key>
+	<string>达意，待应用 %@ 条</string>
+	<key>返回原位置</key>
+	<string>返回原位置</string>
+	<key>还有 %@ 条，在活动窗口里看</key>
+	<string>还有 %@ 条，在活动窗口里看</string>
+	<key>还没有润色记录</key>
+	<string>还没有润色记录</string>
+	<key>还没有配置模型</key>
+	<string>还没有配置模型</string>
+	<key>这个应用</key>
+	<string>这个应用</string>
+	<key>这个输入区不允许写入，无法润色。</key>
+	<string>这个输入区不允许写入，无法润色。</string>
+	<key>这个输入区已有运行中的润色任务。</key>
+	<string>这个输入区已有运行中的润色任务。</string>
+	<key>这个输入区的多段内容无法按原位定位，请只选中其中一段再润色。</key>
+	<string>这个输入区的多段内容无法按原位定位，请只选中其中一段再润色。</string>
+	<key>这份清单现在是空的，其他记录仍在。</key>
+	<string>这份清单现在是空的，其他记录仍在。</string>
+	<key>退出后丢失</key>
+	<string>退出后丢失</string>
+	<key>退出达意</key>
+	<string>退出达意</string>
+	<key>选中一条记录，这里显示它的目标、模型和全文。</key>
+	<string>选中一条记录，这里显示它的目标、模型和全文。</string>
+	<key>选区</key>
+	<string>选区</string>
+	<key>选定服务商并填入 API Key 之后就能发出请求。</key>
+	<string>选定服务商并填入 API Key 之后就能发出请求。</string>
+	<key>选择后可编辑，保存并启用后切换</key>
+	<string>选择后可编辑，保存并启用后切换</string>
+	<key>选择服务商</key>
+	<string>选择服务商</string>
+	<key>选择模型…</key>
+	<string>选择模型…</string>
+	<key>选用</key>
+	<string>选用</string>
+	<key>通义兼容模式；enable_thinking 关思考</key>
+	<string>通义兼容模式；enable_thinking 关思考</string>
+	<key>通用</key>
+	<string>通用</string>
+	<key>配置无效：%@。</key>
+	<string>配置无效：%@。</string>
+	<key>钥匙串写入失败（%@）</key>
+	<string>钥匙串写入失败（%@）</string>
+	<key>键 %@</key>
+	<string>键 %@</string>
+	<key>降序</key>
+	<string>降序</string>
+	<key>隐藏检查器</key>
+	<string>隐藏检查器</string>
+	<key>顺序</key>
+	<string>顺序</string>
+	<key>预览不调用模型；上方系统提示词将作为另一条消息一同发送。</key>
+	<string>预览不调用模型；上方系统提示词将作为另一条消息一同发送。</string>
+	<key>额外参数</key>
+	<string>额外参数</string>
+	<key>额外参数 JSON</key>
+	<string>额外参数 JSON</string>
+	<key>额外参数必须是 JSON 对象</key>
+	<string>额外参数必须是 JSON 对象</string>
+	<key>高级</key>
+	<string>高级</string>
+	<key>默认为模型 id</key>
+	<string>默认为模型 id</string>
+	<key>默认内容已填入，保存后生效。</key>
+	<string>默认内容已填入，保存后生效。</string>
+	<key>默认模型</key>
+	<string>默认模型</string>
+</dict>
+</plist>

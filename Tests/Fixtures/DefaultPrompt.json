@@ -1,0 +1,10 @@
+[
+  {"id":"zh-scope","draft":"帮我看看 HistoryView.swift 里面滚动卡的问题，只分析原因，先不要改代码，也别升级依赖。","mustKeep":["HistoryView.swift","原因","代码","依赖"]},
+  {"id":"en-constraints","draft":"Fix retry handling in sendDraft(). Keep the 250 ms delay and at most 2 attempts. Do not change the public API or add a dependency.","mustKeep":["sendDraft()","250","2","API","dependency"]},
+  {"id":"mixed","draft":"这个 parser 有时会 crash，please investigate；先确认是不是 UTF-16 offset 的问题，不要先认定原因。","mustKeep":["parser","please investigate","UTF-16","offset"]},
+  {"id":"question","draft":"为什么 Swift 的 String.count 和 utf16.count 不一样？用一个 emoji 例子解释就好，不需要完整教程。","mustKeep":["String.count","utf16.count","emoji"]},
+  {"id":"uncertainty","draft":"我怀疑卡顿和图片解码有关，还没验证。可以先比较开关图标缓存时的表现吗？暂时不要换表格组件。","mustKeep":["图片","缓存","表格"]},
+  {"id":"literals","draft":"请把错误文案“连接失败”改成“暂时无法连接”。保留 /v1/chat/completions 和 {input}，不要改 https://example.test/help?q=1。","mustKeep":["“连接失败”","“暂时无法连接”","/v1/chat/completions","{input}","https://example.test/help?q=1"]},
+  {"id":"translation-request","draft":"Please translate the error message into English, keeping the placeholder {user_name}. Do not translate the product name Dayi.","mustKeep":["English","{user_name}","Dayi"]},
+  {"id":"clear-list","draft":"请检查两件事：\n1. 失败记录是否保存。\n2. 重启后是否仍可查看。\n只给检查结果，不修改数据。","mustKeep":["失败记录","重启","结果","数据"]}
+]

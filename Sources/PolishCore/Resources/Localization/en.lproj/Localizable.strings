@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key> · 下一次按 %@ 起生效</key>
+	<string> · Takes effect on the next %@ press</string>
+	<key> 秒 · </key>
+	<string> s · </string>
+	<key>%@ 天后</key>
+	<string>Days until clearing: %@</string>
+	<key>%@ 字</key>
+	<string>Characters: %@</string>
+	<key>%@ 字 · %@</key>
+	<string>Characters: %@ · %@</string>
+	<key>%@ 家服务商可选，其中 %@ 家在达意里实测过。</key>
+	<string>%@ providers available; %@ tested in Dayi.</string>
+	<key>%@ 已经是「%@」的快捷键。</key>
+	<string>%@ is already assigned to “%@”.</string>
+	<key>%@ 未能注册，多半已被其他应用占用；仍然是 %@。</key>
+	<string>Could not register %@; another app may be using it. The shortcut remains %@.</string>
+	<key>%@ 条</key>
+	<string>Records: %@</string>
+	<key>%@ 条中 %@ 条从未发过请求</key>
+	<string>%@ entries total; %@ never tested</string>
+	<key>%@ 的润色请求未完成</key>
+	<string>The polishing request for %@ did not complete</string>
+	<key>%@ 的润色请求未完成。</key>
+	<string>The polishing request for %@ did not complete.</string>
+	<key>%@ 的焦点不在可润色的文字输入区</key>
+	<string>Focus in %@ is not in a supported text input</string>
+	<key>%@ 秒</key>
+	<string>%@ s</string>
+	<key>%@ 里没有找到输入焦点 · 点进输入框再按</key>
+	<string>No input focus found in %@ · Click a text field, then press</string>
+	<key>%@快捷键 %@</key>
+	<string>%@ shortcut %@</string>
+	<key>%@，%@ 条</key>
+	<string>%@, records: %@</string>
+	<key>%@，全局快捷键 %@</key>
+	<string>%@, global shortcut %@</string>
+	<key>%@，空</key>
+	<string>%@, empty</string>
+	<key>2026-09-10 实测</key>
+	<string>Tested on 2026-09-10</string>
+	<key>2026-09-10 实测 k2.6 关思考 3–5 秒；k2.7-code／k3 关不掉思考</key>
+	<string>Tested on 2026-09-10: k2.6 took 3–5 s with thinking disabled; k2.7-code/k3 cannot disable thinking</string>
+	<key>CC Switch 标为 Chat Completions</key>
+	<string>Listed as Chat Completions by CC Switch</string>
+	<key>Chat Completions 地址</key>
+	<string>Chat Completions URL</string>
+	<key>Dayi 窗口在最前面。请切回目标应用并把光标放进输入框，再按 ⌃⌥P。</key>
+	<string>Dayi is in front. Return to the target app, focus the input, then press ⌃⌥P.</string>
+	<key>Dayi 自定义润色</key>
+	<string>Dayi Custom Polish</string>
+	<key>Dayi 默认润色</key>
+	<string>Dayi Default Polish</string>
+	<key>DeepSeek 与 Kimi 只认 thinking: {type: disabled}；它们收下 reasoning_effort 但照常思考。</key>
+	<string>DeepSeek and Kimi use thinking: {type: disabled}. They accept reasoning_effort but continue thinking.</string>
+	<key>GLM-5.3 关不掉思考，只认 reasoning_effort: low；两个字段可以同时发，各家只取自己认的那个。</key>
+	<string>GLM-5.3 cannot disable thinking; use reasoning_effort: low. Both fields can be sent; each provider uses the one it supports.</string>
+	<key>GLM-5.3 只认 reasoning_effort</key>
+	<string>GLM-5.3 uses reasoning_effort only</string>
+	<key>POLISH_ENDPOINT 必须为不含凭据或查询参数的 HTTPS URL</key>
+	<string>POLISH_ENDPOINT must be an HTTPS URL without credentials or query parameters</string>
+	<key>{input} 会替换为待润色内容，必须且只能出现一次。</key>
+	<string>{input} is replaced with the draft and must appear exactly once.</string>
+	<key>⌘X 通常用于剪切。启用后，Dayi 会在其他应用中占用这个组合，普通剪切可能无法使用。仍要将它设为「%@」吗？</key>
+	<string>⌘X is normally Cut. Dayi will capture this combination in other apps, so normal cutting may become unavailable. Use it for “%@” anyway?</string>
+	<key>「%@」里没有记录</key>
+	<string>No records in “%@”</string>
+	<key>上下文已失效</key>
+	<string>Context expired</string>
+	<key>下次启动达意时生效。界面语言不改变润色结果的语言。</key>
+	<string>Takes effect the next time Dayi starts. Interface language does not change the language of polished text.</string>
+	<key>不占用 ⌘Z</key>
+	<string>Leaves ⌘Z available</string>
+	<key>不支持</key>
+	<string>Not supported</string>
+	<key>不清除</key>
+	<string>Never</string>
+	<key>不限时长</key>
+	<string>No age limit</string>
+	<key>不限条数</key>
+	<string>No count limit</string>
+	<key>中国官方</key>
+	<string>China Official</string>
+	<key>之后只留下这条记录本身</key>
+	<string>Keep only the record metadata afterward</string>
+	<key>从目录添加…</key>
+	<string>Add from Catalog…</string>
+	<key>位置</key>
+	<string>Location</string>
+	<key>使用 ⌘X</key>
+	<string>Use ⌘X</string>
+	<key>保存后下一次按 %@ 起生效，不用重启</key>
+	<string>Takes effect on the next %@ press after saving; no restart needed</string>
+	<key>保存并启用</key>
+	<string>Save and Activate</string>
+	<key>保存时存进钥匙串</key>
+	<string>Stored in Keychain when saved</string>
+	<key>保存的快捷键没能注册，已回到 %@ / %@。</key>
+	<string>Saved shortcuts could not be registered. Restored %@ / %@.</string>
+	<key>保留策略没能写进设置，下次启动会回到上一次保存的那份。</key>
+	<string>The retention policy could not be saved. The last saved policy will be used on the next launch.</string>
+	<key>保留记录</key>
+	<string>Keep records</string>
+	<key>修改仅保存在本机，保存后用于下一次润色；正在处理的任务不受影响。</key>
+	<string>Changes stay on this Mac and apply to the next polish after saving. Running tasks keep their original prompt.</string>
+	<key>全局，覆盖其他应用</key>
+	<string>Global across apps</string>
+	<key>全部 %@</key>
+	<string>All %@</string>
+	<key>全部活动</key>
+	<string>All Activity</string>
+	<key>关闭思考</key>
+	<string>Disable thinking</string>
+	<key>写入不确定</key>
+	<string>Write Uncertain</string>
+	<key>写入违反数据约束：%@</key>
+	<string>The write violated a data constraint: %@</string>
+	<key>切到 %@ 并应用</key>
+	<string>Switch to %@ and Apply</string>
+	<key>刚刚清理 %@ 条，清空正文 %@ 条</key>
+	<string>Deleted %@ records and cleared text in %@ records</string>
+	<key>删除 %@ 条记录</key>
+	<string>Delete Records (%@)</string>
+	<key>删除记录</key>
+	<string>Delete Record</string>
+	<key>删除这 %@ 条</key>
+	<string>Delete Records (%@)</string>
+	<key>删除这条</key>
+	<string>Delete Record</string>
+	<key>删除选中记录</key>
+	<string>Delete Selected Records</string>
+	<key>刷新模型</key>
+	<string>Refresh Models</string>
+	<key>升序</key>
+	<string>Ascending</string>
+	<key>历史</key>
+	<string>History</string>
+	<key>历史保存在 %@。</key>
+	<string>History is stored at %@.</string>
+	<key>历史保存在 %@：超过 %@ 天或 %@ 条的记录会删除，正文在 %@ 天后清除。</key>
+	<string>History is stored at %@. Records older than %@ days or beyond %@ entries are deleted; text is cleared after %@ days.</string>
+	<key>历史只保存在内存中。</key>
+	<string>History is stored in memory only.</string>
+	<key>历史数据库尚未打开，稍后再保存</key>
+	<string>The history database is not open yet; try saving shortly</string>
+	<key>历史记录未能保存</key>
+	<string>History could not be saved</string>
+	<key>历史记录未能保存。</key>
+	<string>History could not be saved.</string>
+	<key>原应用已退出。</key>
+	<string>The original app has quit.</string>
+	<key>原文</key>
+	<string>Original</string>
+	<key>原文已恢复</key>
+	<string>Original text restored</string>
+	<key>原文本已变化，未覆盖新内容。</key>
+	<string>The original text changed. New content was not overwritten.</string>
+	<key>原生</key>
+	<string>Native</string>
+	<key>原输入区已不可用（窗口或页面已改变）。</key>
+	<string>The original input is unavailable (the window or page changed).</string>
+	<key>取消</key>
+	<string>Cancel</string>
+	<key>可刷新在线模型列表，也可手动输入 ID；列表不代表已通过润色测试。</key>
+	<string>Refresh the online list or enter an ID manually. Listed models have not necessarily passed a polishing test.</string>
+	<key>名称</key>
+	<string>Name</string>
+	<key>后台写回</key>
+	<string>Background Write</string>
+	<key>唤醒中</key>
+	<string>Waking</string>
+	<key>回到原位重试</key>
+	<string>Return and Retry</string>
+	<key>国际区兼容模式</key>
+	<string>International compatibility mode</string>
+	<key>国际官方</key>
+	<string>Global Official</string>
+	<key>图标关掉后 %@ 照常工作，但设置只能从活动窗口打开。</key>
+	<string>%@ still works with the icon hidden, but Settings can only be opened from the activity window.</string>
+	<key>在任何应用的输入区选中文字，按下快捷键。
+达意会就地改写，并保留一次专用撤回。</key>
+	<string>Select text in any app’s input field and press the shortcut.
+Dayi rewrites it in place and keeps a dedicated undo.</string>
+	<key>在系统设置中查看</key>
+	<string>View in System Settings</string>
+	<key>地址</key>
+	<string>URL</string>
+	<key>复制润色结果</key>
+	<string>Copy Polished Result</string>
+	<key>复制结果</key>
+	<string>Copy Result</string>
+	<key>失败</key>
+	<string>Failed</string>
+	<key>存在钥匙串</key>
+	<string>Stored in Keychain</string>
+	<key>官方 API</key>
+	<string>Official API</string>
+	<key>官方注明兼容层面向测试；单段文本改写够用</key>
+	<string>The provider describes this compatibility layer as intended for testing; suitable for single-passage rewriting</string>
+	<key>实测</key>
+	<string>Tested</string>
+	<key>实测耗时</key>
+	<string>Test Duration</string>
+	<key>将 ⌘X 用作全局快捷键？</key>
+	<string>Use ⌘X as a global shortcut?</string>
+	<key>尚未选择模型</key>
+	<string>No model selected</string>
+	<key>就绪</key>
+	<string>Ready</string>
+	<key>尾延迟大</key>
+	<string>High tail latency</string>
+	<key>尾延迟大：最慢一次约 </key>
+	<string>High tail latency: slowest request about </string>
+	<key>展开</key>
+	<string>Expand</string>
+	<key>已保存并启用</key>
+	<string>Saved and Active</string>
+	<key>已保存的模型配置无效</key>
+	<string>The saved model configuration is invalid</string>
+	<key>已保存的配置</key>
+	<string>Saved Configurations</string>
+	<key>已保存，下一次润色生效。</key>
+	<string>Saved. Applies to the next polish.</string>
+	<key>已停止自动操作</key>
+	<string>Automatic actions stopped</string>
+	<key>已写入</key>
+	<string>Written</string>
+	<key>已写回 %@ 原位 · 回读一致。</key>
+	<string>Written back to the original location in %@ · Read-back matched.</string>
+	<key>已发出请求</key>
+	<string>Request sent</string>
+	<key>已发出请求，正在润色 %@ 的选区。</key>
+	<string>Request sent; polishing the selection in %@.</string>
+	<key>已实测</key>
+	<string>Tested</string>
+	<key>已应用</key>
+	<string>Applied</string>
+	<key>已恢复 %@ 的原文。</key>
+	<string>Restored the original text in %@.</string>
+	<key>已授权</key>
+	<string>Authorized</string>
+	<key>已撤回</key>
+	<string>Undone</string>
+	<key>已撤回 %@ 的替换</key>
+	<string>Undid the replacement in %@</string>
+	<key>已替换</key>
+	<string>Replaced</string>
+	<key>已替换 %@ 的选区</key>
+	<string>Replaced the selection in %@</string>
+	<key>已选 %@ 条记录</key>
+	<string>Records selected: %@</string>
+	<key>常驻显示状态图标</key>
+	<string>Keep the status icon visible</string>
+	<key>应用</key>
+	<string>App</string>
+	<key>应用资源包</key>
+	<string>app resource bundle</string>
+	<key>应用退出时任务未完成。</key>
+	<string>The task was incomplete when the app quit.</string>
+	<key>应用退出时正在写回，无法确认结果。</key>
+	<string>The app quit while writing; the result could not be confirmed.</string>
+	<key>当前 %@ 条 · ⇧⌘⌫</key>
+	<string>Records: %@ · ⇧⌘⌫</string>
+	<key>当前使用 Dayi 默认提示词</key>
+	<string>Using the Dayi default prompt</string>
+	<key>当前使用本机自定义提示词</key>
+	<string>Using your local custom prompt</string>
+	<key>当前焦点不是可润色的文本输入区。</key>
+	<string>Focus is not in a supported text input.</string>
+	<key>待处理 ×%@</key>
+	<string>Pending ×%@</string>
+	<key>待应用</key>
+	<string>Awaiting Apply</string>
+	<key>快捷键已生效，但没能写进设置：下次启动会回到 %@。</key>
+	<string>The shortcut is active but could not be saved. It will revert to %@ on the next launch.</string>
+	<key>快捷键当前没有注册，保存的组合要等下次启动才会生效。</key>
+	<string>Shortcuts are not registered. The saved combination will take effect on the next launch.</string>
+	<key>快捷键当前没有注册，改动要等下次启动才会生效。</key>
+	<string>Shortcuts are not registered. Changes will take effect on the next launch.</string>
+	<key>快捷键未注册</key>
+	<string>Shortcut not registered</string>
+	<key>快捷键未注册 · 没有覆盖其他应用的快捷键</key>
+	<string>Shortcut not registered · Other apps’ shortcuts were not overridden</string>
+	<key>思考控制、额外参数</key>
+	<string>Thinking controls and extra parameters</string>
+	<key>思考控制、额外参数 · 已按 %@ 预填</key>
+	<string>Thinking controls and extra parameters · Prefilled for %@</string>
+	<key>恢复默认内容</key>
+	<string>Restore default content</string>
+	<key>或</key>
+	<string>or</string>
+	<key>打开系统设置</key>
+	<string>Open System Settings</string>
+	<key>打开设置…</key>
+	<string>Open Settings…</string>
+	<key>按下…</key>
+	<string>Press keys…</string>
+	<key>按列排序</key>
+	<string>Sort by column</string>
+	<key>按新的保留策略清理时出错。</key>
+	<string>Could not apply the new retention policy.</string>
+	<key>排序</key>
+	<string>Sort</string>
+	<key>排序依据</key>
+	<string>Sort By</string>
+	<key>提示词</key>
+	<string>Prompt</string>
+	<key>搜索名称或模型 id</key>
+	<string>Search name or model ID</string>
+	<key>搜索模型 ID 或名称</key>
+	<string>Search model ID or name</string>
+	<key>搜索范围是原文与润色结果，正文清除后不再可搜。</key>
+	<string>Search covers original and polished text. Cleared text is no longer searchable.</string>
+	<key>搜索记录</key>
+	<string>Search Records</string>
+	<key>搜索记录（⌘F）</key>
+	<string>Search records (⌘F)</string>
+	<key>撤回</key>
+	<string>Undo</string>
+	<key>撤回替换</key>
+	<string>Undo Replacement</string>
+	<key>撤回最近一次</key>
+	<string>Undo Last Replacement</string>
+	<key>撤回要求受保护前缀未变；已实现范围内的后缀编辑允许，冲突时保留现状。</key>
+	<string>Undo requires the protected prefix to remain unchanged. Supported suffix edits are preserved; conflicts leave the text untouched.</string>
+	<key>撤销未保存修改</key>
+	<string>Discard edits</string>
+	<key>支持</key>
+	<string>Supported</string>
+	<key>收起</key>
+	<string>Collapse</string>
+	<key>数据库文件已损坏：%@</key>
+	<string>The database is corrupt: %@</string>
+	<key>数据库正被其他连接写入，本次操作未执行。</key>
+	<string>Another connection is writing to the database. This operation was not performed.</string>
+	<key>数据库结构版本为 %@，高于本版本支持的 %@；请升级应用后再打开。</key>
+	<string>Database schema version %@ is newer than the supported version %@. Update the app before opening it.</string>
+	<key>数据库读写失败：%@</key>
+	<string>Database I/O failed: %@</string>
+	<key>数据库错误 %@：%@</key>
+	<string>Database error %@: %@</string>
+	<key>无可用正文</key>
+	<string>No text available</string>
+	<key>无法安全撤回这次替换。</key>
+	<string>This replacement cannot be safely undone.</string>
+	<key>无法应用结果。</key>
+	<string>Could not apply the result.</string>
+	<key>无法打开数据库文件：%@</key>
+	<string>Could not open the database: %@</string>
+	<key>无法确定要润色的文本，请先在输入区选中它。</key>
+	<string>Could not determine the text to polish. Select it in the input first.</string>
+	<key>无法确认写入结果 · 已停止自动操作</key>
+	<string>Could not confirm the write · Automatic actions stopped</string>
+	<key>无法确认写入结果；已停止自动操作。</key>
+	<string>Could not confirm the write; automatic actions stopped.</string>
+	<key>无法确认写回 %@ 的结果；已停止自动操作。</key>
+	<string>Could not confirm the write to %@; automatic actions stopped.</string>
+	<key>无法读取自定义提示词，当前使用默认内容：</key>
+	<string>Could not load the custom prompt; using the default: </string>
+	<key>时间</key>
+	<string>Time</string>
+	<key>昨天</key>
+	<string>Yesterday</string>
+	<key>显示</key>
+	<string>Show</string>
+	<key>显示/隐藏边栏</key>
+	<string>Show/Hide Sidebar</string>
+	<key>显示名称</key>
+	<string>Display Name</string>
+	<key>显示或隐藏检查器（⌥⌘I）</key>
+	<string>Show or hide inspector (⌥⌘I)</string>
+	<key>显示检查器</key>
+	<string>Show Inspector</string>
+	<key>最多 %@ 条</key>
+	<string>Record limit: %@</string>
+	<key>最多条数</key>
+	<string>Maximum records</string>
+	<key>最近：%@ · %@</key>
+	<string>Recent: %@ · %@</string>
+	<key>最近：%@ · %@ · %@</key>
+	<string>Recent: %@ · %@ · %@</string>
+	<key>最长 %@ 天</key>
+	<string>Day limit: %@</string>
+	<key>服务商</key>
+	<string>Provider</string>
+	<key>服务商没有返回可用模型；可手动输入 ID。</key>
+	<string>The provider returned no usable models. You can enter an ID manually.</string>
+	<key>未保存</key>
+	<string>Not Saved</string>
+	<key>未写入</key>
+	<string>Not written</string>
+	<key>未完成</key>
+	<string>Unfinished</string>
+	<key>未实测</key>
+	<string>Not tested</string>
+	<key>未实测 · 地址与参数以服务方文档为准</key>
+	<string>Not tested · Check the provider’s documentation for its URL and parameters</string>
+	<key>未授权</key>
+	<string>Not Authorized</string>
+	<key>未授权辅助功能</key>
+	<string>Accessibility not authorized</string>
+	<key>未能写入原输入区。</key>
+	<string>Could not write to the original input.</string>
+	<key>未选择服务商</key>
+	<string>No provider selected</string>
+	<key>未配置模型</key>
+	<string>No model configured</string>
+	<key>权限</key>
+	<string>Permissions</string>
+	<key>来源</key>
+	<string>Source</string>
+	<key>查看全部活动</key>
+	<string>Show All Activity</string>
+	<key>检查器</key>
+	<string>Inspector</string>
+	<key>检查器一次只讲一条记录。</key>
+	<string>The inspector shows one record at a time.</string>
+	<key>检查模型设置</key>
+	<string>Check Model Settings</string>
+	<key>模型</key>
+	<string>Model</string>
+	<key>模型 id</key>
+	<string>Model ID</string>
+	<key>模型 id 为 HF 仓库名；未实测</key>
+	<string>Model ID is an HF repository name; not tested</string>
+	<key>模型列表已更新；选择后请用真实请求测试。</key>
+	<string>Model list updated. Select a model, then test with a real request.</string>
+	<key>模型列表需要 Chat Completions 地址；不支持列表的服务可手动输入模型 ID</key>
+	<string>A Chat Completions URL is required to list models. If the service has no list API, enter the model ID manually.</string>
+	<key>模型地址</key>
+	<string>model URL</string>
+	<key>模型未记录</key>
+	<string>Model not recorded</string>
+	<key>模型没有返回可用文本。</key>
+	<string>The model returned no usable text.</string>
+	<key>模型请求失败（HTTP %@）。</key>
+	<string>Model request failed (HTTP %@).</string>
+	<key>模型输出未正常完成；未采用不完整结果。</key>
+	<string>The model output did not finish normally; the incomplete result was not used.</string>
+	<key>模型返回了无法识别的响应。</key>
+	<string>The model returned an unrecognized response.</string>
+	<key>模型；请在设置里选一个</key>
+	<string>model; choose one in Settings</string>
+	<key>模板占位符</key>
+	<string>template placeholder</string>
+	<key>正在写回 %@ 的选区…</key>
+	<string>Writing back to the selection in %@…</string>
+	<key>正在写回 %@。</key>
+	<string>Writing back to %@.</string>
+	<key>正在写回原位置</key>
+	<string>Writing back to the original location</string>
+	<key>正在唤醒 %@ 的输入区…</key>
+	<string>Waking the input in %@…</string>
+	<key>正在应用</key>
+	<string>Applying</string>
+	<key>正在撤回</key>
+	<string>Undoing</string>
+	<key>正在撤回 %@ 的替换…</key>
+	<string>Undoing the replacement in %@…</string>
+	<key>没有产生结果</key>
+	<string>No result produced</string>
+	<key>没有匹配「%@」的记录</key>
+	<string>No records matching “%@”</string>
+	<key>没有可应用的结果。</key>
+	<string>No result to apply.</string>
+	<key>没有可撤回的替换</key>
+	<string>No replacement to undo</string>
+	<key>没有找到输入焦点。请先点进要润色的输入框，再按 ⌃⌥P。</key>
+	<string>No input focus found. Click the intended text field, then press ⌃⌥P.</string>
+	<key>没有覆盖其他应用的快捷键。%@</key>
+	<string>Other apps’ shortcuts were not overridden. %@</string>
+	<key>活动</key>
+	<string>Activity</string>
+	<key>活动窗口</key>
+	<string>Activity Window</string>
+	<key>测试中…</key>
+	<string>Testing…</string>
+	<key>测试失败</key>
+	<string>Test Failed</string>
+	<key>测试通过 · %.1f 秒</key>
+	<string>Test Passed · %.1f s</string>
+	<key>润色 %@ 的选区…</key>
+	<string>Polishing the selection in %@…</string>
+	<key>润色中</key>
+	<string>Polishing</string>
+	<key>润色中 ×%@</key>
+	<string>Polishing ×%@</string>
+	<key>润色后</key>
+	<string>Polished</string>
+	<key>润色请求未完成。</key>
+	<string>The polishing request did not complete.</string>
+	<key>润色选区</key>
+	<string>Polish Selection</string>
+	<key>添加自定义服务商</key>
+	<string>Add Custom Provider</string>
+	<key>清空全部 %@ 条记录？</key>
+	<string>Clear all records (%@)?</string>
+	<key>清空历史</key>
+	<string>Clear History</string>
+	<key>清空历史…</key>
+	<string>Clear History…</string>
+	<key>清除搜索</key>
+	<string>Clear Search</string>
+	<key>清除正文</key>
+	<string>Clear text</string>
+	<key>火山方舟；未实测</key>
+	<string>Volcengine Ark; not tested</string>
+	<key>点按后按下新的组合键；⎋ 取消，⌫ 恢复默认 %@</key>
+	<string>Click and press a new combination; ⎋ cancels, ⌫ restores the default %@</string>
+	<key>状态</key>
+	<string>Status</string>
+	<key>用户提示词</key>
+	<string>User prompt</string>
+	<key>用户提示词必须包含且仅包含一个 {input}</key>
+	<string>User prompt must contain exactly one {input}</string>
+	<key>用真实请求测试</key>
+	<string>Test with a Real Request</string>
+	<key>由服务决定</key>
+	<string>Provider default</string>
+	<key>登录时启动</key>
+	<string>Launch at login</string>
+	<key>登录项未能更改：</key>
+	<string>Could not change the login item:</string>
+	<key>目录 0700 · 文件 0600 · 撤回数据只在内存，退出即失</key>
+	<string>Folder 0700 · File 0600 · Undo is held in memory and lost on quit</string>
+	<key>目录来自 CC Switch </key>
+	<string>Catalog from CC Switch </string>
+	<key>目标</key>
+	<string>Target</string>
+	<key>目标应用</key>
+	<string>Target App</string>
+	<key>空为不发</key>
+	<string>Empty: omit parameter</string>
+	<key>立即</key>
+	<string>Immediately</string>
+	<key>第三方中转</key>
+	<string>Third Party</string>
+	<key>类别</key>
+	<string>Category</string>
+	<key>系统报告的原因：注册失败（%@）。</key>
+	<string>System reason: registration failed (%@).</string>
+	<key>系统提示词</key>
+	<string>System prompt</string>
+	<key>系统提示词不能为空</key>
+	<string>System prompt must not be empty</string>
+	<key>系统设置 → 隐私与安全性 → 辅助功能，勾选这个应用。</key>
+	<string>Select this app in System Settings → Privacy &amp; Security → Accessibility.</string>
+	<key>结构迁移到版本 %@ 失败：%@</key>
+	<string>Migration to schema version %@ failed: %@</string>
+	<key>结果就绪</key>
+	<string>Result Ready</string>
+	<key>结果就绪，正在写回</key>
+	<string>Result ready; writing back</string>
+	<key>结果就绪，正在写回 %@。</key>
+	<string>Result ready; writing back to %@.</string>
+	<key>结果已保留，请回到原输入区后应用。</key>
+	<string>The result was kept. Return to the original input to apply it.</string>
+	<key>结果已备好 · 回到 %@ 按</key>
+	<string>Result ready · Return to %@ and press</string>
+	<key>结果已生成，尚未写回</key>
+	<string>Result generated; not yet written</string>
+	<key>网站</key>
+	<string>Websites</string>
+	<key>网页输入区不支持后台写回 —— 回到 %@ 按 %@。</key>
+	<string>This web input does not support background writes — return to %@ and press %@.</string>
+	<key>耗时</key>
+	<string>Duration</string>
+	<key>聚合服务</key>
+	<string>Aggregator</string>
+	<key>聚合服务，模型 id 以其目录为准</key>
+	<string>Aggregator; use model IDs from its catalog</string>
+	<key>自定义服务商使用 OpenAI Chat Completions 兼容协议</key>
+	<string>Custom providers use the OpenAI Chat Completions compatible protocol</string>
+	<key>范围</key>
+	<string>Scope</string>
+	<key>获取中…</key>
+	<string>Fetching…</string>
+	<key>菜单栏</key>
+	<string>Menu Bar</string>
+	<key>记录保存在本机，下次启动自动恢复。</key>
+	<string>Records stay on this Mac and are restored on the next launch.</string>
+	<key>记录和正文都会从数据库删除，无法恢复。</key>
+	<string>Records and their text will be permanently deleted from the database.</string>
+	<key>设置…</key>
+	<string>Settings…</string>
+	<key>设置… ⌘,</key>
+	<string>Settings… ⌘,</string>
+	<key>语言</key>
+	<string>Language</string>
+	<key>请在系统设置 → 隐私与安全性 → 辅助功能中授权 Dayi。</key>
+	<string>Allow Dayi in System Settings → Privacy &amp; Security → Accessibility.</string>
+	<key>请求失败</key>
+	<string>Request Failed</string>
+	<key>读取到无法解析的字段：%@。</key>
+	<string>Could not decode field: %@.</string>
+	<key>跟随系统</key>
+	<string>Follow System</string>
+	<key>跳回 %@</key>
+	<string>Return to %@</string>
+	<key>跳回原应用</key>
+	<string>Return to Original App</string>
+	<key>辅助功能</key>
+	<string>Accessibility</string>
+	<key>辅助功能读取失败（AX %@），本次未能确认输入焦点。</key>
+	<string>Accessibility read failed (AX %@). Input focus could not be confirmed.</string>
+	<key>输入不能为空。</key>
+	<string>Input cannot be empty.</string>
+	<key>输入区</key>
+	<string>Input</string>
+	<key>输入区里还没有文字，无法润色。</key>
+	<string>The input is empty; there is nothing to polish.</string>
+	<key>输入示例后显示预览，不会发送网络请求。</key>
+	<string>Enter a sample to preview it locally. No network request is sent.</string>
+	<key>输入示例，预览发给模型的用户消息</key>
+	<string>Enter a sample to preview the user message</string>
+	<key>达意 · %@</key>
+	<string>Dayi · %@</string>
+	<key>达意 · 待应用 %@</key>
+	<string>Dayi · Awaiting Apply %@</string>
+	<key>达意在最前面 · 切回目标应用再按</key>
+	<string>Dayi is in front · Return to the target app and press</string>
+	<key>达意还不能读取或替换选区</key>
+	<string>Dayi cannot read or replace selections yet</string>
+	<key>达意还没有辅助功能权限</key>
+	<string>Dayi needs Accessibility permission</string>
+	<key>达意，%@</key>
+	<string>Dayi, %@</string>
+	<key>达意，待应用 %@ 条</key>
+	<string>Dayi, %@ awaiting apply</string>
+	<key>返回原位置</key>
+	<string>Return to Original Location</string>
+	<key>还有 %@ 条，在活动窗口里看</key>
+	<string>%@ more in the activity window</string>
+	<key>还没有润色记录</key>
+	<string>No polishing history yet</string>
+	<key>还没有配置模型</key>
+	<string>No model configured yet</string>
+	<key>这个应用</key>
+	<string>this app</string>
+	<key>这个输入区不允许写入，无法润色。</key>
+	<string>This input does not allow writing and cannot be polished.</string>
+	<key>这个输入区已有运行中的润色任务。</key>
+	<string>This input already has a polishing task in progress.</string>
+	<key>这个输入区的多段内容无法按原位定位，请只选中其中一段再润色。</key>
+	<string>This input’s multiple sections cannot be located reliably. Select a single section and try again.</string>
+	<key>这份清单现在是空的，其他记录仍在。</key>
+	<string>This list is empty. Other records are still available.</string>
+	<key>退出后丢失</key>
+	<string>Lost on quit</string>
+	<key>退出达意</key>
+	<string>Quit Dayi</string>
+	<key>选中一条记录，这里显示它的目标、模型和全文。</key>
+	<string>Select a record to see its target, model, and full text.</string>
+	<key>选区</key>
+	<string>Selection</string>
+	<key>选定服务商并填入 API Key 之后就能发出请求。</key>
+	<string>Choose a provider and enter its API key to make requests.</string>
+	<key>选择后可编辑，保存并启用后切换</key>
+	<string>Edit after selecting; switch by saving and activating</string>
+	<key>选择服务商</key>
+	<string>Choose Provider</string>
+	<key>选择模型…</key>
+	<string>Choose Model…</string>
+	<key>选用</key>
+	<string>Use Provider</string>
+	<key>通义兼容模式；enable_thinking 关思考</key>
+	<string>Qwen compatibility mode; disable thinking with enable_thinking</string>
+	<key>通用</key>
+	<string>General</string>
+	<key>配置无效：%@。</key>
+	<string>Invalid configuration: %@.</string>
+	<key>钥匙串写入失败（%@）</key>
+	<string>Keychain write failed (%@)</string>
+	<key>键 %@</key>
+	<string>Key %@</string>
+	<key>降序</key>
+	<string>Descending</string>
+	<key>隐藏检查器</key>
+	<string>Hide Inspector</string>
+	<key>顺序</key>
+	<string>Order</string>
+	<key>预览不调用模型；上方系统提示词将作为另一条消息一同发送。</key>
+	<string>Preview does not call the model. The system prompt above is sent as a separate message.</string>
+	<key>额外参数</key>
+	<string>Extra Parameters</string>
+	<key>额外参数 JSON</key>
+	<string>Extra Parameters JSON</string>
+	<key>额外参数必须是 JSON 对象</key>
+	<string>Extra parameters must be a JSON object</string>
+	<key>高级</key>
+	<string>Advanced</string>
+	<key>默认为模型 id</key>
+	<string>Defaults to model ID</string>
+	<key>默认内容已填入，保存后生效。</key>
+	<string>Default content restored in the editor. Save to apply.</string>
+	<key>默认模型</key>
+	<string>Default Model</string>
+</dict>
+</plist>
