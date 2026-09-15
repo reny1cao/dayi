@@ -20,7 +20,7 @@ struct NativeRecordTable: NSViewRepresentable {
         scroll.autohidesScrollers = true
         scroll.drawsBackground = true
         scroll.backgroundColor = .textBackgroundColor
-        let table = NSTableView()
+        let table = RecordTableView()
         table.style = .inset
         table.rowSizeStyle = .custom
         // The existing design has 28pt content and 4pt vertical padding at each edge.
@@ -368,5 +368,35 @@ struct NativeRecordTable: NSViewRepresentable {
         super.layout()
         glyph.frame = NSRect(x: 0, y: (bounds.height - 14) / 2, width: 14, height: 14)
         spinner.frame = NSRect(x: 0, y: (bounds.height - 16) / 2, width: 16, height: 16)
+    }
+}
+
+/// AppKit answers a table's accessibility children by creating a cell view for every row of
+/// every column (`NSTableViewCellMockElement` → `viewAtColumn:row:makeIfNecessary:`). With a
+/// few hundred records that is more than a thousand views built on the main thread per query,
+/// measured at 2.5 s for 189 rows, and an assistive client that re-reads the window after each
+/// change keeps the app beachballing for as long as it polls. Only the rows on screen are
+/// answered. Scrolling brings the rest into reach, which is how VoiceOver walks any long list.
+@MainActor final class RecordTableView: NSTableView {
+    private var visibleRowViews: [Any] {
+        let range = rows(in: visibleRect)
+        guard range.length > 0 else { return [] }
+        return (range.location..<NSMaxRange(range)).compactMap { rowView(atRow: $0, makeIfNecessary: false) }
+    }
+
+    @objc func accessibilityRows() -> [Any]? { visibleRowViews }
+
+    @objc func accessibilityVisibleRows() -> [Any]? { visibleRowViews }
+
+    @objc func accessibilitySelectedRows() -> [Any]? {
+        let visible = rows(in: visibleRect)
+        return selectedRowIndexes.filter { visible.contains($0) }.compactMap { rowView(atRow: $0, makeIfNecessary: false) }
+    }
+
+    override func accessibilityChildren() -> [Any]? {
+        var children: [Any] = []
+        if let header = headerView { children.append(header) }
+        children.append(contentsOf: visibleRowViews)
+        return children
     }
 }

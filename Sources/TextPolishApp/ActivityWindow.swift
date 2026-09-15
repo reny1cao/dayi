@@ -52,14 +52,21 @@ struct ActivityWindow: View {
                 .navigationSplitViewColumnWidth(min: 170, ideal: Metric.sidebarWidth, max: 260)
         } detail: {
             detail
-                .inspector(isPresented: inspectorPresented) {
-                    RecordInspector(store: store)
-                        .inspectorColumnWidth(min: Metric.inspectorMinWidth,
-                                              ideal: Metric.inspectorWidth, max: 420)
-                }
                 .toolbar { toolbar }
         }
         .navigationSplitViewStyle(.balanced)
+        // On the split view, not on `detail`. With the inspector attached inside the detail
+        // column, collapsing the sidebar sends AppKit into an endless update-constraints cycle
+        // between the inspector's hosting view and the split view — the window beachballs at
+        // 100% CPU until the process is killed (reproduced on 0.2.4 build 8, macOS 26.6.2;
+        // AppKit eventually throws "more Update Constraints in Window passes than there are
+        // views"). Attached here it is a trailing column beside the whole split view and the
+        // toggle is clean. Keep it here.
+        .inspector(isPresented: inspectorPresented) {
+            RecordInspector(store: store)
+                .inspectorColumnWidth(min: Metric.inspectorMinWidth,
+                                      ideal: Metric.inspectorWidth, max: 420)
+        }
         .background {
             GeometryReader { proxy in
                 Color.clear
