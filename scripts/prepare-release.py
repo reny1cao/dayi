@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare a private preview bundle; never publish or claim notarization automatically."""
+"""Prepare a preview release bundle; never publish or claim notarization automatically."""
 import argparse
 import hashlib
 import json
@@ -54,9 +54,9 @@ def main():
         'tag': args.tag, 'version': info['CFBundleShortVersionString'], 'build': info['CFBundleVersion'],
         'commit': commit, 'architecture': arch, 'minimum_macos_declared': info['LSMinimumSystemVersion'],
         'developer_id_signed': True, 'stapled_notarization_ticket': ticket,
-        'public_release_ready': False,
-        'blockers': ['Brand asset rights require owner review']
-                    + ([] if ticket else ['Apple notarization and stapling incomplete']),
+        # License adopted and brand assets cleared by the owner on 2026-09-15; notarization is the remaining gate.
+        'public_release_ready': ticket,
+        'blockers': [] if ticket else ['Apple notarization and stapling incomplete'],
         'swift': run('swift', '--version').stdout.strip(),
         'artifact': archive.name,
     }

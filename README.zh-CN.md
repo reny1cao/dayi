@@ -11,7 +11,7 @@
 
 达意是一个原生 macOS 菜单栏工具：用你自己的模型服务润色选中的文字。按一次全局快捷键捕获草稿，记住它来自哪个输入区，并在支持的情况下把结果写回原处。达意只以 macOS App 形式发布。
 
-**发布状态：** 首个预览版 `v0.2.4-preview.1` 已发布到 [GitHub Releases](https://github.com/reny1cao/dayi/releases)，Developer ID 签名并经 Apple 公证。仍有未完成的验收项，见 [发布就绪报告](docs/releases/readiness.md)。
+**发布状态：** 预览版在 [GitHub Releases](https://github.com/reny1cao/dayi/releases) 发布，Developer ID 签名并经 Apple 公证，当前为 `v0.2.4-preview.2`。仍有未完成的验收项，见 [发布就绪报告](docs/releases/readiness.md)。
 
 ## 演示
 

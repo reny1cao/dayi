@@ -11,7 +11,7 @@
 
 Dayi is a native macOS menu-bar utility for refining selected text with your own model provider. Capture a draft with a global shortcut, keep its original target, and apply the result back to that input when supported. Dayi is distributed only as a macOS app.
 
-**Release status:** preparing `v0.2.4-preview.1` on [GitHub Releases](https://github.com/reny1cao/dayi/releases). The source is public; no preview binary is published yet because notarization is not complete. See the [release readiness report](docs/releases/readiness.md). Developer ID signing alone does not mean an app is notarized.
+**Release status:** preview builds are published on [GitHub Releases](https://github.com/reny1cao/dayi/releases), Developer ID signed and Apple notarized; the current one is `v0.2.4-preview.2`. Acceptance items still open are listed in the [release readiness report](docs/releases/readiness.md).
 
 ## Demo
 

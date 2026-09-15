@@ -70,13 +70,22 @@ public final class PolishJobs {
 
     public func wait(for id: UUID) async { await tasks[id]?.value }
 
+    /// A second press in the original input applies the result that is still waiting there.
+    /// A result whose snapshot no longer matches the input has expired: the user kept typing, or
+    /// sent the draft. It is marked as a conflict and stops claiming the key, so the press that
+    /// found it polishes the current text instead of retrying a write that can never succeed.
     @discardableResult
     public func applyWaitingResult(to targetID: String) -> Bool {
-        guard let job = jobs.last(where: {
+        guard let index = jobs.lastIndex(where: {
             contexts[$0.id]?.target.id == targetID && $0.computeState == .succeeded
-                && [.pending, .blocked].contains($0.applicationState)
-        }) else { return false }
-        apply(job.id)
+                && [.pending, .blocked].contains($0.applicationState) && $0.failure != .target(.conflict)
+        }), let context = contexts[jobs[index].id] else { return false }
+        if let current = try? context.target.readDocument(), !current.utf16.elementsEqual(context.snapshot.document.utf16) {
+            jobs[index].message = TargetError.conflict.localizedDescription
+            jobs[index].failure = .target(.conflict)
+            return false
+        }
+        apply(jobs[index].id)
         return true
     }
 

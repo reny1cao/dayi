@@ -214,6 +214,31 @@ private final class MemoryTarget: TextTarget {
     #expect(jobs.jobs[0].applicationState == .applied)
 }
 
+@MainActor @Test func expiredWaitingResultStopsClaimingTheKeyAndANewPolishStarts() async throws {
+    let target = MemoryTarget("first draft", selected: "first draft")
+    target.supportsBackgroundWrite = false
+    target.isFocused = false
+    let jobs = PolishJobs { "polished " + $0 }
+    let first = try jobs.start(target: target)
+    await jobs.wait(for: first)
+    #expect(jobs.jobs[0].applicationState == .blocked)
+    // The user came back, kept typing, and pressed the key again.
+    target.isFocused = true
+    target.document = "second draft"
+    target.range = NSRange(location: 0, length: 12)
+    #expect(!jobs.applyWaitingResult(to: target.id))
+    #expect(jobs.jobs[0].failure == .target(.conflict))
+    #expect(jobs.jobs[0].applicationState == .blocked)
+    #expect(target.writes == 0)
+    // The same press now polishes the current text; the expired result never claims the key again.
+    let second = try jobs.start(target: target)
+    await jobs.wait(for: second)
+    #expect(target.document == "polished second draft")
+    #expect(jobs.jobs[1].applicationState == .applied)
+    #expect(!jobs.applyWaitingResult(to: target.id))
+    #expect(jobs.jobs[0].result == "polished first draft")
+}
+
 @MainActor @Test(arguments: [false, true]) func unverifiedWriteIsNeverRetried(readFails: Bool) async throws {
     let target = MemoryTarget("text", selected: "text")
     target.ignoreWrites = !readFails
