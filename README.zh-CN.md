@@ -13,6 +13,12 @@
 
 **发布状态：** 首个预览版 `v0.2.4-preview.1` 已发布到 [GitHub Releases](https://github.com/reny1cao/dayi/releases)，Developer ID 签名并经 Apple 公证。仍有未完成的验收项，见 [发布就绪报告](docs/releases/readiness.md)。
 
+## 演示
+
+[![达意演示：选中草稿，按 ⌃⌥P，原位替换](Assets/demo-zh.png)](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4)
+
+42 秒，无声：原位润色、撤回、网页输入区的待应用流程，以及活动窗口。[中文视频](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4) · [English video](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4)。视频使用合成草稿和通用的助手窗口，不是真实会话的录屏。
+
 ## 现在能做什么
 
 - 原生活动表格：搜索、筛选、历史记录和检查器。

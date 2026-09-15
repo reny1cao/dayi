@@ -8,3 +8,5 @@ The project owner selected the supplied transparent black PNG on 2026-09-11. `Da
 
 Brand redistribution terms remain part of the owner's public-release licensing review.
 27c4771df256b1e37d1f8c08fcf87b530d4fed7f08200c525fc76318abac4021  Assets/Dayi.png
+
+`demo-zh.png` and `demo-en.png` are poster frames rendered from the Remotion demo project (kept outside Git under `work/demo-video/`) on 2026-09-15; they show synthetic drafts in a generic assistant window and link to the demo videos attached to the GitHub release.
