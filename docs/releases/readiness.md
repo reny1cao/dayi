@@ -43,7 +43,7 @@ Sources: [Apple Developer ID](https://developer.apple.com/developer-id/), [notar
 | Notarization | **Blocked.** Current bundle has no stapled ticket; no notarization profile was supplied or configured in this task. No credentials were extracted from another project. |
 | Supported devices | arm64 preview; deployment target macOS 14, local checks on macOS 26. Intel and minimum-macOS acceptance are outstanding. |
 | UI/client acceptance | See docs/status.md: model configuration and core flows exercised; real browser hotkey-to-new-icon and complex rich text remain unaccepted. |
-| CI | Workflow added for macos-26 / Xcode 26.6 (documented hosted image). Its remote result must be recorded separately from local validation. CI ad-hoc bundles are never uploaded as release assets. |
+| CI | Workflow for macos-26 / Xcode 26.6 (documented hosted image). Since 2026-09-15 it runs on the public repository `reny1cao/dayi` only: macOS minutes on the private repository hit the account's Actions budget, so Actions is disabled there. The public run on the synced commit is the recorded validation. CI ad-hoc bundles are never uploaded as release assets. |
 | Final public publication | Source is public. A public binary still requires the notarization gate and brand-asset review, then an explicit owner publication decision. |
 
 [Current runner image](https://github.com/actions/runner-images/blob/main/images/macos/macos-26-arm64-Readme.md) was checked before choosing Xcode 26.6. Pinned third-party Actions use verified upstream commit references. The workflow has no deployment credentials, no pull_request_target trigger, and no publish step.
