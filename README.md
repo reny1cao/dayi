@@ -15,9 +15,9 @@ Dayi is a native macOS menu-bar utility for refining selected text with your own
 
 ## Demo
 
-[![Dayi demo: select a draft, press ⌃⌥P, the selection is replaced in place](Assets/demo-en.png)](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4)
+https://github.com/user-attachments/assets/a05d6635-e27f-481c-8394-49a98d746444
 
-42 seconds, no audio: polish in place, undo, the pending-result flow for web inputs, and the activity window. [English video](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4) · [中文视频](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4). The videos use synthetic drafts and a generic assistant window, not recordings of real sessions.
+42 seconds, no audio: polish in place, undo, the pending-result flow for web inputs, and the activity window. [中文视频](https://github.com/user-attachments/assets/8c2572ea-6116-45b0-b5b5-97b47129624e) · [download](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4). The videos use synthetic drafts and a generic assistant window, not recordings of real sessions.
 
 ## What works today
 

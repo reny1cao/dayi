@@ -15,9 +15,9 @@
 
 ## 演示
 
-[![达意演示：选中草稿，按 ⌃⌥P，原位替换](Assets/demo-zh.png)](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4)
+https://github.com/user-attachments/assets/8c2572ea-6116-45b0-b5b5-97b47129624e
 
-42 秒，无声：原位润色、撤回、网页输入区的待应用流程，以及活动窗口。[中文视频](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4) · [English video](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4)。视频使用合成草稿和通用的助手窗口，不是真实会话的录屏。
+42 秒，无声：原位润色、撤回、网页输入区的待应用流程，以及活动窗口。[English video](https://github.com/user-attachments/assets/a05d6635-e27f-481c-8394-49a98d746444) · [下载](https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4)。视频使用合成草稿和通用的助手窗口，不是真实会话的录屏。
 
 ## 现在能做什么
 
