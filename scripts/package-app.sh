@@ -49,7 +49,7 @@ cat > "$polish_app/Contents/Info.plist" <<'PLIST'
 <key>CFBundleExecutable</key><string>TextPolishApp</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleShortVersionString</key><string>0.2.4</string>
-<key>CFBundleVersion</key><string>8</string>
+<key>CFBundleVersion</key><string>9</string>
 <key>LSMinimumSystemVersion</key><string>14.0</string>
 <key>LSUIElement</key><true/>
 <key>NSHighResolutionCapable</key><true/>
