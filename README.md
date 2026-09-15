@@ -7,6 +7,7 @@
 
 <h1 align="center">Dayi · 达意</h1>
 <p align="center">Refine your words where you write them.</p>
+<p align="center"><a href="README.zh-CN.md">简体中文</a> · English</p>
 
 Dayi is a native macOS menu-bar utility for refining selected text with your own model provider. Capture a draft with a global shortcut, keep its original target, and apply the result back to that input when supported. Dayi is distributed only as a macOS app.
 
@@ -94,8 +95,4 @@ Project-owned code is licensed under the [MIT License](LICENSE). The current def
 
 ## 中文说明
 
-达意只提供 macOS App：使用自己的模型配置，在原输入区捕获草稿并安全应用结果。默认快捷键为 ⌃⌥P，撤回为 ⌃⌥Z；支持中文／英文界面、模型列表和按网站整理记录。网页／Electron 后台写回仍未完成。
-
-在「设置 → 提示词」查看、编辑系统与用户提示词，并用示例输入进行本地预览；预览不调用模型。保存后从下一次润色生效，重启后保留；恢复默认内容后需保存才能生效。repo 保留 Dayi 独立编写的默认模板，本机自定义与后续打磨不会自动修改或上传到 repo。
-
-首个公开预览版正在准备；项目代码采用 MIT 许可（见 LICENSE）。历史材料审查与 Apple 公证完成前，不作为正式开源版本发布。
+完整中文文档见 [README.zh-CN.md](README.zh-CN.md)。
