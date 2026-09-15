@@ -24,7 +24,7 @@
 - **可信的撤回。** 写入后回读校验，原文被改动过就拒绝覆盖。
 - **开源。** MIT，[GitHub Releases 提供公证构建](https://github.com/reny1cao/dayi/releases/latest)，仓库达标后提供 Homebrew cask。
 
-**安装：** 从 [Releases](https://github.com/reny1cao/dayi/releases/latest) 下载最新的 `Dayi-*.zip`，用 `SHA256SUMS.txt` 校验，把 `Dayi.app` 放进 `/Applications`，按提示授予辅助功能权限。仅 Apple Silicon，macOS 14 及以上。当前预览版 `v0.2.4-preview.2`；未完成的验收项见 [发布就绪报告](docs/releases/readiness.md)。
+**安装：** 从 [Releases](https://github.com/reny1cao/dayi/releases/latest) 下载最新的 `Dayi-*.zip`，用 `SHA256SUMS.txt` 校验，把 `Dayi.app` 放进 `/Applications`，按提示授予辅助功能权限。仅 Apple Silicon，macOS 14 及以上。当前预览版 `v0.2.4-preview.3`；未完成的验收项见 [发布就绪报告](docs/releases/readiness.md)。
 
 ## 什么会离开你的 Mac
 

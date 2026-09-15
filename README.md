@@ -24,7 +24,7 @@ Select a rough draft in Codex, Claude, or any macOS text input, press **⌃⌥P*
 - **Undo you can trust.** Dayi reads the field back after writing and refuses to overwrite text that changed under it.
 - **Open source.** MIT, [notarized builds on GitHub Releases](https://github.com/reny1cao/dayi/releases/latest), a Homebrew cask once the repository qualifies.
 
-**Install:** download the latest `Dayi-*.zip` from [Releases](https://github.com/reny1cao/dayi/releases/latest), verify `SHA256SUMS.txt`, move `Dayi.app` to `/Applications`, then grant Accessibility access when asked. Apple Silicon, macOS 14 or later. Current preview: `v0.2.4-preview.2`; open acceptance items are in the [release readiness report](docs/releases/readiness.md).
+**Install:** download the latest `Dayi-*.zip` from [Releases](https://github.com/reny1cao/dayi/releases/latest), verify `SHA256SUMS.txt`, move `Dayi.app` to `/Applications`, then grant Accessibility access when asked. Apple Silicon, macOS 14 or later. Current preview: `v0.2.4-preview.3`; open acceptance items are in the [release readiness report](docs/releases/readiness.md).
 
 ## What leaves your Mac
 
