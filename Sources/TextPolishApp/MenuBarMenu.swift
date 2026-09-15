@@ -68,6 +68,12 @@ struct MenuBarMenu: View {
                 openSettings()
                 dismiss()
             }
+            if UpdateController.isAvailable {
+                MenuBarRow(title: L10n.tr("检查更新…")) {
+                    UpdateController.shared.checkForUpdates()
+                    dismiss()
+                }
+            }
             MenuBarRow(title: L10n.tr("退出达意"), shortcut: "⌘Q") { NSApp.terminate(nil) }
         }
         .font(.body)

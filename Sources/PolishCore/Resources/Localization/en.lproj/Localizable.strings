@@ -418,6 +418,8 @@ Dayi rewrites it in place and keeps a dedicated undo.</string>
 	<string>Inspector</string>
 	<key>检查器一次只讲一条记录。</key>
 	<string>The inspector shows one record at a time.</string>
+	<key>检查更新…</key>
+	<string>Check for Updates…</string>
 	<key>检查模型设置</key>
 	<string>Check Model Settings</string>
 	<key>模型</key>

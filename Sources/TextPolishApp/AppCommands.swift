@@ -57,6 +57,9 @@ struct AppCommands: Commands {
         // two coexist and the menu grows a duplicate. The bundle carries a zh-Hans
         // localization so AppKit titles that one 设置… rather than "Settings…".
         CommandGroup(after: .appInfo) {
+            if UpdateController.isAvailable {
+                Button(L10n.tr("检查更新…")) { UpdateController.shared.checkForUpdates() }
+            }
             Divider()
             // Carbon hot keys, not menu commands: a menu item can only be chosen while Dayi
             // is frontmost, which is the one moment neither of these can do anything. They

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dayi — Polish the text you're typing, where you're typing it</title>
+<meta name="description" content="Dayi is an open-source macOS menu-bar utility. Select a rough draft in Codex, Claude, or any text input, press ⌃⌥P, and it is rewritten in place by a model you choose. Undo with ⌃⌥Z. No account, no server.">
+<link rel="canonical" href="https://reny1cao.github.io/dayi/">
+<link rel="alternate" hreflang="en" href="https://reny1cao.github.io/dayi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://github.com/reny1cao/dayi/blob/main/README.zh-CN.md">
+<link rel="icon" href="dayi.png" type="image/png">
+<meta property="og:title" content="Dayi — polish the text you're typing, where you're typing it">
+<meta property="og:description" content="Open-source macOS hotkey that rewrites a selected draft in place with your own model. Undo included. No account, no server.">
+<meta property="og:image" content="https://reny1cao.github.io/dayi/og.png">
+<meta property="og:url" content="https://reny1cao.github.io/dayi/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --ground: #f4f5f7; --surface: #fff; --surface-2: #eceef2; --ink: #1c1d21; --ink-2: #4b4f57; --muted: #6b6f78; --line: #d9dce2;
+  --accent: #0a5bd8; --accent-ink: #0a5bd8; --accent-tint: #e6eefc; --good: #23803f;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ground: #17181c; --surface: #1f2127; --surface-2: #272a31; --ink: #ecedf1; --ink-2: #c3c6cd; --muted: #9a9ea8; --line: #363a43; --accent: #6ea8ff; --accent-ink: #8dbaff; --accent-tint: #1d2a44; --good: #5cc07a; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; padding-inline: 20px; padding-block: 0 72px; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent-ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 980px; margin: 0 auto; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:hover { color: var(--ink); }
+.hero { padding-block: 40px 28px; display: grid; gap: 22px; }
+h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.12; letter-spacing: -.02em; margin: 0; max-width: 18ch; text-wrap: balance; font-weight: 700; }
+.lede { font-size: 20px; color: var(--ink-2); max-width: 58ch; margin: 0; }
+.kbd { font-family: var(--mono); font-size: .9em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 7px; white-space: nowrap; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 9px; font-weight: 600; text-decoration: none; font-size: 16px; border: 1px solid transparent; }
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.fine { font-size: 14px; color: var(--muted); }
+.fine code { font-family: var(--mono); }
+.demo { margin-top: 10px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #f3f2ef; }
+.demo img { display: block; width: 100%; height: auto; }
+section { padding-block: 44px 8px; }
+h2 { font-size: 26px; letter-spacing: -.01em; margin: 0 0 18px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.step .k { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.step h3 { margin: 6px 0 6px; font-size: 18px; }
+.step p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.point { padding: 4px 0; }
+.point h3 { font-size: 17px; margin: 0 0 4px; }
+.point p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12.5px; color: var(--muted); font-weight: 500; letter-spacing: .04em; background: var(--surface-2); }
+tbody tr:last-child td { border-bottom: none; }
+video { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #000; }
+.limits { background: var(--surface-2); border-radius: 12px; padding: 16px 20px; font-size: 15px; color: var(--ink-2); }
+.limits ul { margin: 6px 0 0; padding-left: 1.2em; }
+form { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+input[type=email] { flex: 1 1 260px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 9px; font-size: 16px; background: var(--surface); color: var(--ink); }
+label.check { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-2); width: 100%; }
+.hint { font-size: 14px; color: var(--muted); margin-top: 8px; }
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 20px; font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 14px 24px; }
+footer a { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><img src="dayi.png" alt="">Dayi <span class="fine" style="font-weight:400">达意</span></a>
+    <nav aria-label="Site">
+      <a href="#how">How it works</a>
+      <a href="#privacy">What leaves your Mac</a>
+      <a href="https://github.com/reny1cao/dayi">GitHub</a>
+      <a href="https://github.com/reny1cao/dayi/blob/main/README.zh-CN.md" lang="zh-Hans">中文</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Polish the text you're typing, where you're typing it.</h1>
+    <p class="lede">Select a rough draft in Codex, Claude, or any macOS text input, press <span class="kbd">⌃⌥P</span>, and it's rewritten in place by a model you choose. <span class="kbd">⌃⌥Z</span> undoes only that replacement. Dayi never sends your draft for you.</p>
+    <div class="cta">
+      <a class="btn primary" id="download" href="https://github.com/reny1cao/dayi/releases/latest">Download for Mac</a>
+      <a class="btn ghost" href="https://github.com/reny1cao/dayi">View source</a>
+      <span class="fine">Free · MIT · Apple Silicon, macOS 14+ · Developer ID signed and notarized</span>
+    </div>
+    <div class="demo"><img src="demo.gif" width="800" height="450" alt="Select a rough draft in a coding assistant, press Control-Option-P, and the selection is rewritten in place"></div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><div class="k">1</div><h3>Select the draft</h3><p>In any native, web, or Electron text field. With nothing selected, Dayi takes the whole input.</p></div>
+      <div class="step"><div class="k">2</div><h3>Press ⌃⌥P</h3><p>The text goes to the endpoint you configured with the prompt you can read and edit in Settings. A floating capsule shows the elapsed time.</p></div>
+      <div class="step"><div class="k">3</div><h3>It's replaced in place</h3><p>Dayi reads the field back to confirm the write. If the text changed under it, it refuses rather than overwrites. ⌃⌥Z restores the original.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why developers keep it</h2>
+    <div class="points">
+      <div class="point"><h3>Bring your own model</h3><p>Any Chat Completions-compatible endpoint: OpenAI, Anthropic, DeepSeek, Ollama, your company's gateway. Keys stay in your Keychain.</p></div>
+      <div class="point"><h3>No account, no server</h3><p>History is a local SQLite file with a retention policy you control. There is nothing to sign up for and nothing to shut down.</p></div>
+      <div class="point"><h3>Made for prompts</h3><p>The default prompt tightens a rough instruction for a coding assistant without answering it. Edit it, or keep several.</p></div>
+      <div class="point"><h3>Undo you can trust</h3><p>Every replacement is verified by reading the field back, and undo targets exactly that edit, not your later typing.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>42 seconds, no audio</h2>
+    <video controls preload="metadata" playsinline poster="demo-poster.png" src="https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4">
+      Your browser can't play this video. <a href="https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo-en.mp4">Download it</a>.
+    </video>
+    <p class="fine">Synthetic drafts in a generic assistant window, not recordings of real sessions. <a href="https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.1/dayi-demo.mp4" lang="zh-Hans">中文版</a></p>
+  </section>
+
+  <section id="privacy">
+    <h2>What leaves your Mac</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Where it goes</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>The selected text, plus the bundled or your custom prompt</td><td>The model endpoint you configured, over HTTPS</td><td>Only when you press ⌃⌥P</td></tr>
+        <tr><td>Your API key</td><td>macOS Keychain; sent only as the <code>Authorization</code> header to that endpoint</td><td>Same request</td></tr>
+        <tr><td>A website hostname</td><td>Nowhere; stored locally for history filters</td><td>On capture from a browser</td></tr>
+        <tr><td>A missing site icon request</td><td>The site's public HTTPS origin, without cookies or the page URL</td><td>Once per host, cached</td></tr>
+        <tr><td>Anything else</td><td>Nowhere. No telemetry. Update checks, when enabled, fetch a static file from this site</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fine" style="margin-top:10px">Accessibility permission lets Dayi read the focused field and write the result back. It does not read other windows or run when you aren't pressing the shortcut. Every line above is checkable in <a href="https://github.com/reny1cao/dayi/tree/main/Sources">the source</a>.</p>
+  </section>
+
+  <section>
+    <h2>Honest limits</h2>
+    <div class="limits">
+      Preview software. Read this before you rely on it.
+      <ul>
+        <li>Web and Electron inputs need their window in front to receive the result. If you switched away, the result waits; return and press ⌃⌥P again.</li>
+        <li>Apple Silicon only, tested on macOS 26. macOS 14 is the declared minimum, not yet a verified one.</li>
+        <li>Chrome and Safari are exercised; Firefox, Edge, and Brave are recognized but not accepted. Rich-text editors and input-method composition are unverified.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pro" hidden>
+    <h2>Dayi Pro is coming</h2>
+    <p class="lede" style="font-size:17px">Unlimited model profiles with a switch shortcut, unlimited custom prompts and per-site skill sets, unlimited history with search and export. The core stays free and MIT.</p>
+    <form id="waitlist" method="post">
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
+      <button class="btn primary" type="submit" id="join">Tell me when it ships</button>
+      <label class="check"><input type="checkbox" name="has_key" value="yes" id="has_key"> I already have an API key for a model provider</label>
+    </form>
+    <p class="hint" id="waitlist-status">One email when Pro launches. Nothing else.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Renyi Cao · MIT License</span>
+    <a href="https://github.com/reny1cao/dayi/releases">Releases</a>
+    <a href="https://github.com/reny1cao/dayi/blob/main/SECURITY.md">Security</a>
+    <a href="https://github.com/reny1cao/dayi/blob/main/THIRD_PARTY_NOTICES.md">Third-party notices</a>
+    <a href="https://github.com/reny1cao/dayi/issues">Issues</a>
+  </footer>
+</div>
+
+<script>
+// ---- Configuration. Both are empty until an account exists; the page works without them. ----
+// Formspree (or any endpoint accepting a JSON POST with {email, has_key}). Leave empty to hide the waitlist.
+const WAITLIST_ENDPOINT = "";
+// GoatCounter site code, e.g. "dayi" for https://dayi.goatcounter.com. Leave empty for no analytics at all.
+const GOATCOUNTER_CODE = "";
+
+(function () {
+  const pro = document.getElementById("pro");
+  if (WAITLIST_ENDPOINT) {
+    pro.hidden = false;
+    const form = document.getElementById("waitlist");
+    const status = document.getElementById("waitlist-status");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const hasKey = document.getElementById("has_key").checked;
+      status.textContent = "Sending…";
+      try {
+        const r = await fetch(WAITLIST_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify({ email, has_key: hasKey, lang: navigator.language }) });
+        status.textContent = r.ok ? "Added. Thank you." : "Couldn't add you right now. Please try again later.";
+        if (r.ok) form.reset();
+      } catch { status.textContent = "Couldn't reach the server. Please try again later."; }
+    });
+  }
+  if (GOATCOUNTER_CODE) {
+    // Privacy-friendly, cookieless page counts by country and language. Loaded only when configured.
+    const s = document.createElement("script");
+    s.async = true;
+    s.dataset.goatcounter = "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count";
+    s.src = "https://gc.zgo.at/count.js";
+    document.head.appendChild(s);
+  }
+  // Language-aware download label without any external call.
+  const dl = document.getElementById("download");
+  if (dl && /^zh/i.test(navigator.language)) dl.textContent = "下载 Mac 版";
+})();
+</script>
+</body>
+</html>

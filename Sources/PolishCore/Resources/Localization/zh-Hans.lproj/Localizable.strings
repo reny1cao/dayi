@@ -418,6 +418,8 @@
 	<string>检查器</string>
 	<key>检查器一次只讲一条记录。</key>
 	<string>检查器一次只讲一条记录。</string>
+	<key>检查更新…</key>
+	<string>检查更新…</string>
 	<key>检查模型设置</key>
 	<string>检查模型设置</string>
 	<key>模型</key>

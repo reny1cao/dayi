@@ -12,6 +12,10 @@ import SwiftUI
 struct TextPolishApp: App {
     @State private var model = AppModel()
 
+    init() {
+        if UpdateController.isAvailable { UpdateController.shared.start() }
+    }
+
     var body: some Scene {
         // The title bar is `navigationTitle` + `navigationSubtitle` from inside the view: it
         // names the current list and its size, which is what a toolbar title should say when

@@ -6,12 +6,38 @@
 </p>
 
 <h1 align="center">Dayi · 达意</h1>
-<p align="center">Refine your words where you write them.</p>
+<p align="center">Polish the text you're typing, where you're typing it.</p>
 <p align="center"><a href="README.zh-CN.md">简体中文</a> · English</p>
+<p align="center">
+  <a href="https://github.com/reny1cao/dayi/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/reny1cao/dayi?label=download&color=0a5bd8"></a>
+  <img alt="Apple Silicon" src="https://img.shields.io/badge/Apple%20Silicon-macOS%2014%2B-1c1d21">
+  <img alt="Notarized" src="https://img.shields.io/badge/Developer%20ID-notarized-23803f">
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-6b6f78"></a>
+</p>
 
-Dayi is a native macOS menu-bar utility for refining selected text with your own model provider. Capture a draft with a global shortcut, keep its original target, and apply the result back to that input when supported. Dayi is distributed only as a macOS app.
+<p align="center"><img src="Assets/demo.gif" width="800" alt="Select a rough draft in a coding assistant, press Control-Option-P, and the selection is rewritten in place by your own model"></p>
 
-**Release status:** preview builds are published on [GitHub Releases](https://github.com/reny1cao/dayi/releases), Developer ID signed and Apple notarized; the current one is `v0.2.4-preview.2`. Acceptance items still open are listed in the [release readiness report](docs/releases/readiness.md).
+Select a rough draft in Codex, Claude, or any macOS text input, press **⌃⌥P**, and it is rewritten in place by a model you choose. **⌃⌥Z** undoes only that replacement. Dayi never sends your draft for you.
+
+- **Bring your own model.** Any Chat Completions-compatible endpoint, including local ones. Keys live in your Keychain.
+- **No account, no server.** History stays in a local SQLite file. The only network request is the one you configured.
+- **Undo you can trust.** Dayi reads the field back after writing and refuses to overwrite text that changed under it.
+- **Open source.** MIT, [notarized builds on GitHub Releases](https://github.com/reny1cao/dayi/releases/latest), a Homebrew cask once the repository qualifies.
+
+**Install:** download the latest `Dayi-*.zip` from [Releases](https://github.com/reny1cao/dayi/releases/latest), verify `SHA256SUMS.txt`, move `Dayi.app` to `/Applications`, then grant Accessibility access when asked. Apple Silicon, macOS 14 or later. Current preview: `v0.2.4-preview.2`; open acceptance items are in the [release readiness report](docs/releases/readiness.md).
+
+## What leaves your Mac
+
+| Data | Where it goes | When |
+|---|---|---|
+| The selected or captured text, plus the bundled or your custom prompt | The model endpoint you configured, over HTTPS | Only when you press ⌃⌥P |
+| Your API key | macOS Keychain; sent only as the `Authorization` header to that endpoint | Same request |
+| A website hostname (e.g. `github.com`) | Nowhere; stored locally for history filters | On capture from a browser |
+| A missing site icon request | The site's public HTTPS origin, without cookies or the page URL | Once per host, cached |
+| An update check | `https://reny1cao.github.io/dayi/appcast.xml`, a static file on GitHub Pages, via Sparkle with system profiling off | Once a day if you allow automatic checks, or when you choose Check for Updates |
+| Anything else (drafts, results, history, usage) | Nowhere. Dayi has no telemetry | — |
+
+Accessibility permission lets Dayi read the focused text field and write the result back. It does not read other windows or run when you are not pressing the shortcut. For web and Electron editors it pastes through the clipboard and restores your previous clipboard contents right after; it never monitors the clipboard. The source for every line above is in [Sources/](Sources/).
 
 ## Demo
 
@@ -85,7 +111,7 @@ zsh scripts/package-app.sh
 
 The output is `outputs/Dayi.app`. The packaging script builds the supplied artwork into `.icns`, embeds localized resources, and signs with an available Developer ID certificate. Without one, local builds use ad-hoc signing; Accessibility permission may need to be granted again. Use `POLISH_SIGN_IDENTITY` to select a specific signing identity.
 
-GRDB **7.11.1**, pinned exactly, is the only third-party Swift dependency. Networking, HTML icon parsing, and image decoding use Apple frameworks. Shell scripts use macOS tools; Python scripts use the standard library only. The Swift package remains `TextPolish`; `PolishCore` and `PolishStore` are internal app modules, not separately distributed libraries.
+GRDB **7.11.1** and Sparkle **2.10.0**, both pinned exactly, are the only third-party Swift dependencies. Networking, HTML icon parsing, and image decoding use Apple frameworks. Shell scripts use macOS tools; Python scripts use the standard library only. The Swift package remains `TextPolish`; `PolishCore` and `PolishStore` are internal app modules, not separately distributed libraries.
 
 Tests do not normally contact a model. Live model, browser, and icon checks are explicit opt-ins; unit tests and a successful build are not substitutes for real-client acceptance.
 

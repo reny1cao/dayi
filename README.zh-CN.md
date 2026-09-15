@@ -8,10 +8,36 @@
 <h1 align="center">达意 · Dayi</h1>
 <p align="center">在你写字的地方，把话说清楚。</p>
 <p align="center">简体中文 · <a href="README.md">English</a></p>
+<p align="center">
+  <a href="https://github.com/reny1cao/dayi/releases/latest"><img alt="最新版本" src="https://img.shields.io/github/v/release/reny1cao/dayi?label=%E4%B8%8B%E8%BD%BD&color=0a5bd8"></a>
+  <img alt="Apple Silicon" src="https://img.shields.io/badge/Apple%20Silicon-macOS%2014%2B-1c1d21">
+  <img alt="已公证" src="https://img.shields.io/badge/Developer%20ID-%E5%B7%B2%E5%85%AC%E8%AF%81-23803f">
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-6b6f78"></a>
+</p>
 
-达意是一个原生 macOS 菜单栏工具：用你自己的模型服务润色选中的文字。按一次全局快捷键捕获草稿，记住它来自哪个输入区，并在支持的情况下把结果写回原处。达意只以 macOS App 形式发布。
+<p align="center"><img src="Assets/demo.gif" width="800" alt="在编程助手里选中草稿，按 Control-Option-P，选区被你自己的模型原位改写"></p>
 
-**发布状态：** 预览版在 [GitHub Releases](https://github.com/reny1cao/dayi/releases) 发布，Developer ID 签名并经 Apple 公证，当前为 `v0.2.4-preview.2`。仍有未完成的验收项，见 [发布就绪报告](docs/releases/readiness.md)。
+在 Codex、Claude 或任何 macOS 输入框里选中一段草稿，按 **⌃⌥P**，它会被你选择的模型原位改写；**⌃⌥Z** 只撤回这一次替换。达意从不替你发送草稿。
+
+- **自带模型。** 任何 Chat Completions 兼容接口，包括本地模型。密钥只存钥匙串。
+- **没有账号，没有服务器。** 历史保存在本机 SQLite 文件里。唯一的网络请求就是你配置的那一个。
+- **可信的撤回。** 写入后回读校验，原文被改动过就拒绝覆盖。
+- **开源。** MIT，[GitHub Releases 提供公证构建](https://github.com/reny1cao/dayi/releases/latest)，仓库达标后提供 Homebrew cask。
+
+**安装：** 从 [Releases](https://github.com/reny1cao/dayi/releases/latest) 下载最新的 `Dayi-*.zip`，用 `SHA256SUMS.txt` 校验，把 `Dayi.app` 放进 `/Applications`，按提示授予辅助功能权限。仅 Apple Silicon，macOS 14 及以上。当前预览版 `v0.2.4-preview.2`；未完成的验收项见 [发布就绪报告](docs/releases/readiness.md)。
+
+## 什么会离开你的 Mac
+
+| 数据 | 去向 | 时机 |
+|---|---|---|
+| 选中或捕获的文本，以及自带或你自定义的提示词 | 你配置的模型接口，HTTPS | 只在你按 ⌃⌥P 时 |
+| 你的 API 密钥 | macOS 钥匙串；只作为 `Authorization` 头发给该接口 | 同一次请求 |
+| 网站主机名（如 `github.com`） | 不外发；本机保存用于历史筛选 | 从浏览器捕获时 |
+| 缺失的站点图标请求 | 该站点的公开 HTTPS 首页，不带 Cookie 和页面 URL | 每个主机一次，之后缓存 |
+| 更新检查 | `https://reny1cao.github.io/dayi/appcast.xml`，GitHub Pages 上的静态文件，经 Sparkle 请求，系统信息上报已关闭 | 你允许自动检查后每天一次，或点「检查更新…」时 |
+| 其他一切（草稿、结果、历史、用量） | 不外发。达意没有遥测 | — |
+
+辅助功能权限用于读取当前焦点的文本框并写回结果。达意不读取其他窗口，不在你按快捷键之外的时候运行。对网页和 Electron 编辑器，它通过剪贴板粘贴并随即恢复你原来的剪贴板内容，从不监视剪贴板。上面每一行的依据都在 [Sources/](Sources/) 里。
 
 ## 演示
 
@@ -83,7 +109,7 @@ zsh scripts/package-app.sh
 
 产物是 `outputs/Dayi.app`。打包脚本把提供的图稿构建成 `.icns`，嵌入本地化资源，并用可用的 Developer ID 证书签名。没有证书时本地构建用 ad-hoc 签名，辅助功能权限可能需要重新授予。用 `POLISH_SIGN_IDENTITY` 指定签名身份。
 
-GRDB **7.11.1**（精确固定）是唯一的第三方 Swift 依赖。网络、HTML 图标解析和图片解码都用 Apple 框架。Shell 脚本只用 macOS 自带工具；Python 脚本只用标准库。Swift 包名仍为 `TextPolish`；`PolishCore` 和 `PolishStore` 是应用内部模块，不单独分发。
+GRDB **7.11.1** 与 Sparkle **2.10.0**（均精确固定）是仅有的两个第三方 Swift 依赖。网络、HTML 图标解析和图片解码都用 Apple 框架。Shell 脚本只用 macOS 自带工具；Python 脚本只用标准库。Swift 包名仍为 `TextPolish`；`PolishCore` 和 `PolishStore` 是应用内部模块，不单独分发。
 
 测试默认不联系模型。真实模型、浏览器和图标检查都需要显式开启；单元测试和构建成功不能替代真实客户端的验收。
 
