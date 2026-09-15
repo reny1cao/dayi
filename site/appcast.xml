@@ -4,5 +4,15 @@
         <title>Dayi</title>
         <link>https://github.com/reny1cao/dayi/releases</link>
         <description>Updates for Dayi. Entries are added by scripts/update-appcast.sh for each release whose app declares SUPublicEDKey; builds before 0.2.4 build 9 did not check for updates.</description>
+        <item>
+            <title>0.2.4</title>
+            <pubDate>Tue, 15 Sep 2026 21:44:26 +0800</pubDate>
+            <link>https://github.com/reny1cao/dayi/releases/tag/v0.2.4-preview.3</link>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.2.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/reny1cao/dayi/releases/download/v0.2.4-preview.3/Dayi-0.2.4-preview.3-macos-arm64.zip" length="4063728" type="application/octet-stream" sparkle:edSignature="/ENJA9d7XEV7GePGia+yL6tBQjkWQA0YFguEEASJRgajr3qcaOUSGErGzCU0fLi6obeLFfCnYfxTCp+zy0d+Cg=="/>
+        </item>
     </channel>
 </rss>
